@@ -3,7 +3,7 @@
 
 const items = [
   {
-    title: "Blog (Nuxt Content and Netlify CMS)",
+    title: "Liste des formations",
     to: "blog"
   },
 ];
@@ -18,10 +18,10 @@ useHead({
   <v-container>
     <v-list>
       <v-list-item class="mb-2" v-for="(item, key) in items" :key="key">
-        
-          <NuxtLink :to="item.to">
-            {{ item.title }}
-          </NuxtLink>
+
+        <NuxtLink :to="item.to">
+          {{ item.title }}
+        </NuxtLink>
       </v-list-item>
     </v-list>
   </v-container>
