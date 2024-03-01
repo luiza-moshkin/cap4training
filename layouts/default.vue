@@ -1,7 +1,8 @@
 <template>
-  <div class="wrapper">
-    <Header />
-    <nuxt />
-    <ColorModePicker />
-  </div>
+  <v-app>
+    <Header></Header>
+    <v-main>
+      <slot />
+    </v-main>
+  </v-app>
 </template>
