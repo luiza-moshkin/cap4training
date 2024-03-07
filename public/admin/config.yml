@@ -22,7 +22,6 @@ collections:
     label: 'Blog'
     folder: 'content/blog'
     format: 'frontmatter'
-    i18n: true
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     fields:
