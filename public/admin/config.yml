@@ -40,6 +40,7 @@ collections:
     create: true
     slug: '{{slug}}'
     fields:
+
       - { label: 'Title', name: 'title', widget: 'string', required: true }
       - { label: 'Creation Date', name: 'created_at', widget: 'datetime', required: false, default: 'now' }
       - { label: 'Updated Date', name: 'updated_at', widget: 'datetime', required: false, default: 'now' }
@@ -48,8 +49,8 @@ collections:
       - { label: 'Eligible CPF', name: 'eligible_cpf', widget: 'boolean', required: false, default: false}
       - { label: 'Price inter', name: 'price_inter', widget: 'number', required: false}
       - { label: 'Price intra', name: 'price_intra', widget: 'number', required: false}
-      - { label: 'Next date', name: 'price_intra', widget: 'number', required: false}
-      - { label: 'Weight', name: 'price_intra', widget: 'number', required: false}
+      - { label: 'Next date', name: 'next_date', widget: 'number', required: false}
+      - { label: 'Weight', name: 'weight', widget: 'number', required: false}
       - { label: 'Day duration', name: 'duration_day', value_type: "int", widget: 'number', required: true}
       - { label: 'Hour duration', name: 'duration_hour', value_type: "int", widget: 'number', required: true}
       - { label: 'Trainee number minimum', name: 'trainee_number_min', value_type: "int", widget: 'number', required: false}
