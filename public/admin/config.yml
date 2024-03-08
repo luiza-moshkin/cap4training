@@ -7,12 +7,12 @@ backend:
   name: git-gateway
   repo: AurelienDesplanque/cap4training # Path to your GitHub repository
   commit_messages:
-    create: Create {{collection}} “{{slug}}”
-    update: Update {{collection}} “{{slug}}”
-    delete: Delete {{collection}} “{{slug}}”
-    uploadMedia: Upload “{{path}}”
-    deleteMedia: Delete “{{path}}”
-    openAuthoring: '{{message}}'
+    create: "Blog creation ({{slug}})"
+    update: "Update blog ({{slug}})"
+    delete: "Blog deleted ({{slug}})"
+    uploadMedia: "Upload media ({{path}})"
+    deleteMedia: "Delete media {{path}}"
+    openAuthoring: "{{message}}"
 
 media_folder: public/img
 public_folder: /img
@@ -25,21 +25,56 @@ collections:
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Creation Date', name: 'created_at', widget: 'datetime', required: false }
-      - { label: 'Updated Date', name: 'updated_at', widget: 'datetime', required: false }
-      - { label: 'Short Description', name: 'short_description', widget: 'text', required: false }
-      - { label: 'Long Description', name: 'long_description', widget: 'markdown', required: false }
+      - { label: 'Title', name: 'title', widget: 'string', required: true }
+      - { label: 'Creation Date', name: 'created_at', widget: 'datetime', required: false, default: 'now' }
+      - { label: 'Updated Date', name: 'updated_at', widget: 'datetime', required: false, default: 'now' }
+      - { label: 'Short Description', name: 'short_description', widget: 'text', required: true }
+      - { label: 'Long Description', name: 'long_description', widget: 'markdown', required: true }
       - { label: 'Featured Image', name: 'featured_image', widget: 'image', required: false }
-      - { label: 'Training', name: 'training', widget: 'relation', collection: 'training', value_field: 'title', search_fields: ['title'] }
+      - { label: 'Training', name: 'training', widget: 'relation', collection: 'training', value_field: 'title', search_fields: ['title'], required: false }
 
   - name: 'training'
     label: 'Training'
     folder: 'content/training'
     format: 'frontmatter'
     create: true
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    slug: '{{slug}}'
     fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Title', name: 'title', widget: 'string', required: true }
+      - { label: 'Creation Date', name: 'created_at', widget: 'datetime', required: false, default: 'now' }
+      - { label: 'Updated Date', name: 'updated_at', widget: 'datetime', required: false, default: 'now' }
+      - { label: 'Featured Image', name: 'featured_image', widget: 'image', required: false }
+      - { label: 'Category', name: 'category', widget: 'relation', collection: 'category', value_field: 'title', search_fields: ['title'], required: false}
+      - { label: 'Eligible CPF', name: 'eligible_cpf', widget: 'boolean', required: false, default: false}
+      - { label: 'Price inter', name: 'price_inter', widget: 'number', required: false}
+      - { label: 'Price intra', name: 'price_intra', widget: 'number', required: false}
+      - { label: 'Next date', name: 'price_intra', widget: 'number', required: false}
+      - { label: 'Weight', name: 'price_intra', widget: 'number', required: false}
+      - { label: 'Day duration', name: 'duration_day', value_type: "int", widget: 'number', required: true}
+      - { label: 'Hour duration', name: 'duration_hour', value_type: "int", widget: 'number', required: true}
+      - { label: 'Trainee number minimum', name: 'trainee_number_min', value_type: "int", widget: 'number', required: false}
+      - { label: 'Trainee number maximum', name: 'trainee_number_max', value_type: "int", widget: 'number', required: false}
+
+      - { label: 'Short Description', name: 'short_description', widget: 'text', required: true }
+      - { label: 'Long Description', name: 'long_description', widget: 'markdown', required: true }
+      - { label: 'Requirements', name: 'requirements', widget: 'text', required: true }
+      - { label: 'Covered skills', name: 'covered_skills', widget: 'text', required: true }
+      - { label: 'Audience', name: 'audience', widget: 'text', required: true }
+      - { label: 'Goals', name: 'goals', widget: 'text', required: true }
+      - { label: 'Methods', name: 'methods', widget: 'text', required: true }
+      - { label: 'Achievement', name: 'achieveemnt', widget: 'text', required: true }
+      - { label: 'Trainer', name: 'trainer', widget: 'text', required: true }
+      - { label: 'Metas', name: 'trainer', widget: 'text', required: false }
+
+
+  - name: 'category'
+    label: 'Category'
+    folder: 'content/category'
+    format: 'frontmatter'
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string', required: true }
+      - { label: 'Description', name: 'description', widget: 'string', required: false}
 
 
