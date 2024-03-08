@@ -39,9 +39,12 @@ collections:
     format: 'frontmatter'
     create: true
     slug: '{{slug}}'
+    i18n:
+      structure: multiple_folders
+      locales: [en, fr]
+      default_locale: en
     fields:
-
-      - { label: 'Title', name: 'title', widget: 'string', required: true }
+      - { label: 'Title', name: 'title', widget: 'string', required: true, i18n: true  }
       - { label: 'Creation Date', name: 'created_at', widget: 'datetime', required: false, default: 'now' }
       - { label: 'Updated Date', name: 'updated_at', widget: 'datetime', required: false, default: 'now' }
       - { label: 'Featured Image', name: 'featured_image', widget: 'image', required: false }
@@ -56,16 +59,16 @@ collections:
       - { label: 'Trainee number minimum', name: 'trainee_number_min', value_type: "int", widget: 'number', default: 0}
       - { label: 'Trainee number maximum', name: 'trainee_number_max', value_type: "int", widget: 'number', required: true}
 
-      - { label: 'Short Description', name: 'short_description', widget: 'text', required: true }
-      - { label: 'Long Description', name: 'long_description', widget: 'markdown', required: true }
-      - { label: 'Requirements', name: 'requirements', widget: 'markdown', editor_components: [],  buttons: ['bulleted-list', 'numbered-list', 'link'], required: true }
-      - { label: 'Covered skills', name: 'covered_skills', widget: 'markdown', editor_components: [],  buttons: ['bulleted-list', 'numbered-list', 'link'], required: true }
-      - { label: 'Audience', name: 'audience', widget: 'markdown', editor_components: [],  buttons: ['bulleted-list', 'numbered-list', 'link'], required: true }
-      - { label: 'Goals', name: 'goals', widget: 'markdown', editor_components: [],  buttons: ['bulleted-list', 'numbered-list', 'link'], required: true }
-      - { label: 'Methods', name: 'methods', widget: 'markdown', editor_components: [],  buttons: ['bulleted-list', 'numbered-list', 'link'], required: true }
-      - { label: 'Achievement', name: 'achieveemnt', widget: 'markdown', editor_components: [],  buttons: ['bulleted-list', 'numbered-list', 'link'], required: true }
-      - { label: 'Trainer', name: 'trainer', widget: 'markdown', editor_components: [],  buttons: ['bulleted-list', 'numbered-list', 'link'], required: true }
-      - { label: 'Metas', name: 'metas', widget: 'markdown', editor_components: [],  buttons: ['bulleted-list', 'numbered-list', 'link'], required: false }
+      - { label: 'Short Description', name: 'short_description', widget: 'text', required: true, i18n: true  }
+      - { label: 'Long Description', name: 'long_description', widget: 'markdown', required: true, i18n: true  }
+      - { label: 'Requirements', name: 'requirements', widget: 'markdown', editor_components: [],  buttons: ['bulleted-list', 'numbered-list', 'link'], required: true, i18n: true  }
+      - { label: 'Covered skills', name: 'covered_skills', widget: 'markdown', editor_components: [],  buttons: ['bulleted-list', 'numbered-list', 'link'], required: true, i18n: true  }
+      - { label: 'Audience', name: 'audience', widget: 'markdown', editor_components: [],  buttons: ['bulleted-list', 'numbered-list', 'link'], required: true, i18n: true  }
+      - { label: 'Goals', name: 'goals', widget: 'markdown', editor_components: [],  buttons: ['bulleted-list', 'numbered-list', 'link'], required: true, i18n: true  }
+      - { label: 'Methods', name: 'methods', widget: 'markdown', editor_components: [],  buttons: ['bulleted-list', 'numbered-list', 'link'], required: true, i18n: true  }
+      - { label: 'Achievement', name: 'achieveemnt', widget: 'markdown', editor_components: [],  buttons: ['bulleted-list', 'numbered-list', 'link'], required: true, i18n: true  }
+      - { label: 'Trainer', name: 'trainer', widget: 'markdown', editor_components: [],  buttons: ['bulleted-list', 'numbered-list', 'link'], required: true, i18n: true  }
+      - { label: 'Metas', name: 'metas', widget: 'markdown', editor_components: [],  buttons: ['bulleted-list', 'numbered-list', 'link'], required: false, i18n: true  }
 
 
   - name: 'category'
