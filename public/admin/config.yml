@@ -58,7 +58,7 @@ collections:
 
       - { label: 'Short Description', name: 'short_description', widget: 'text', required: true }
       - { label: 'Long Description', name: 'long_description', widget: 'markdown', required: true }
-      - { label: 'Requirements', name: 'requirements', widget: 'markdown', buttons: 'bulleted-list', required: true }
+      - { label: 'Requirements', name: 'requirements', widget: 'markdown', editor_components: [],  buttons: ['bulleted-list', 'numbered-list', 'quote', 'bold', 'italic', 'code', 'link'], required: true }
       - { label: 'Covered skills', name: 'covered_skills', widget: 'text', required: true }
       - { label: 'Audience', name: 'audience', widget: 'text', required: true }
       - { label: 'Goals', name: 'goals', widget: 'text', required: true }
