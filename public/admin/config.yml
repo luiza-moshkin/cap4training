@@ -31,10 +31,10 @@ collections:
       - { label: 'Short Description', name: 'short_description', widget: 'text', required: false }
       - { label: 'Long Description', name: 'long_description', widget: 'markdown', required: false }
       - { label: 'Picture blog', name: 'featured_image', widget: 'image', required: false}
-      - { label: 'Training', name: 'training', widget: 'relation', collection: 'training', value_field: 'title', search_fields: ['title']}
+      - { label: 'Training', name: 'training', widget: 'relation', collection: 'training', value_field: 'trainings', search_fields: ['title']}
 
 
-collections:
+trainings:
   - name: 'training'
     label: 'Training'
     folder: 'content/training'
