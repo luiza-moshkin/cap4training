@@ -45,20 +45,20 @@ collections:
       - { label: 'Creation Date', name: 'created_at', widget: 'datetime', required: false, default: 'now' }
       - { label: 'Updated Date', name: 'updated_at', widget: 'datetime', required: false, default: 'now' }
       - { label: 'Featured Image', name: 'featured_image', widget: 'image', required: false }
-      - { label: 'Category', name: 'category', widget: 'relation', collection: 'category', value_field: 'title', search_fields: ['title'], required: false}
-      - { label: 'Eligible CPF', name: 'eligible_cpf', widget: 'boolean', required: false, default: false}
-      - { label: 'Price inter', name: 'price_inter', widget: 'number', required: false}
-      - { label: 'Price intra', name: 'price_intra', widget: 'number', required: false}
-      - { label: 'Next date', name: 'next_date', widget: 'number', required: false}
+      - { label: 'Category', name: 'category', widget: 'relation', collection: 'category', value_field: 'title', search_fields: ['title'], required: true}
+      - { label: 'Eligible CPF', name: 'eligible_cpf', widget: 'boolean'}
+      - { label: 'Price inter', name: 'price_inter', widget: 'number', value_type: "float", required: false}
+      - { label: 'Price intra', name: 'price_intra', widget: 'number', value_type: "float", required: false}
+      - { label: 'Next date', name: 'next_date', widget: 'datetime', required: false}
       - { label: 'Weight', name: 'weight', widget: 'number', required: false}
       - { label: 'Day duration', name: 'duration_day', value_type: "int", widget: 'number', required: true}
       - { label: 'Hour duration', name: 'duration_hour', value_type: "int", widget: 'number', required: true}
-      - { label: 'Trainee number minimum', name: 'trainee_number_min', value_type: "int", widget: 'number', required: false}
-      - { label: 'Trainee number maximum', name: 'trainee_number_max', value_type: "int", widget: 'number', required: false}
+      - { label: 'Trainee number minimum', name: 'trainee_number_min', value_type: "int", widget: 'number', default: 0}
+      - { label: 'Trainee number maximum', name: 'trainee_number_max', value_type: "int", widget: 'number', required: true}
 
       - { label: 'Short Description', name: 'short_description', widget: 'text', required: true }
       - { label: 'Long Description', name: 'long_description', widget: 'markdown', required: true }
-      - { label: 'Requirements', name: 'requirements', widget: 'text', required: true }
+      - { label: 'Requirements', name: 'requirements', widget: 'markdown', buttons: 'bulleted-list', required: true }
       - { label: 'Covered skills', name: 'covered_skills', widget: 'text', required: true }
       - { label: 'Audience', name: 'audience', widget: 'text', required: true }
       - { label: 'Goals', name: 'goals', widget: 'text', required: true }
