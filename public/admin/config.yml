@@ -58,14 +58,14 @@ collections:
 
       - { label: 'Short Description', name: 'short_description', widget: 'text', required: true }
       - { label: 'Long Description', name: 'long_description', widget: 'markdown', required: true }
-      - { label: 'Requirements', name: 'requirements', widget: 'markdown', editor_components: [],  buttons: ['bulleted-list', 'numbered-list', 'quote', 'bold', 'italic', 'code', 'link'], required: true }
-      - { label: 'Covered skills', name: 'covered_skills', widget: 'text', required: true }
-      - { label: 'Audience', name: 'audience', widget: 'text', required: true }
-      - { label: 'Goals', name: 'goals', widget: 'text', required: true }
-      - { label: 'Methods', name: 'methods', widget: 'text', required: true }
-      - { label: 'Achievement', name: 'achieveemnt', widget: 'text', required: true }
-      - { label: 'Trainer', name: 'trainer', widget: 'text', required: true }
-      - { label: 'Metas', name: 'metas', widget: 'text', required: false }
+      - { label: 'Requirements', name: 'requirements', widget: 'markdown', editor_components: [],  buttons: ['bulleted-list', 'numbered-list', 'link'], required: true }
+      - { label: 'Covered skills', name: 'covered_skills', widget: 'markdown', editor_components: [],  buttons: ['bulleted-list', 'numbered-list', 'link'], required: true }
+      - { label: 'Audience', name: 'audience', widget: 'markdown', editor_components: [],  buttons: ['bulleted-list', 'numbered-list', 'link'], required: true }
+      - { label: 'Goals', name: 'goals', widget: 'markdown', editor_components: [],  buttons: ['bulleted-list', 'numbered-list', 'link'], required: true }
+      - { label: 'Methods', name: 'methods', widget: 'markdown', editor_components: [],  buttons: ['bulleted-list', 'numbered-list', 'link'], required: true }
+      - { label: 'Achievement', name: 'achieveemnt', widget: 'markdown', editor_components: [],  buttons: ['bulleted-list', 'numbered-list', 'link'], required: true }
+      - { label: 'Trainer', name: 'trainer', widget: 'markdown', editor_components: [],  buttons: ['bulleted-list', 'numbered-list', 'link'], required: true }
+      - { label: 'Metas', name: 'metas', widget: 'markdown', editor_components: [],  buttons: ['bulleted-list', 'numbered-list', 'link'], required: false }
 
 
   - name: 'category'
