@@ -65,7 +65,7 @@ collections:
       - { label: 'Methods', name: 'methods', widget: 'text', required: true }
       - { label: 'Achievement', name: 'achieveemnt', widget: 'text', required: true }
       - { label: 'Trainer', name: 'trainer', widget: 'text', required: true }
-      - { label: 'Metas', name: 'trainer', widget: 'text', required: false }
+      - { label: 'Metas', name: 'metas', widget: 'text', required: false }
 
 
   - name: 'category'
