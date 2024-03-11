@@ -114,7 +114,6 @@ collections:
     folder: 'content/session'
     format: 'frontmatter'
     create: true
-    summary: '{{fields.date_session}} {{fields.training}}'
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     fields:
     # Title
