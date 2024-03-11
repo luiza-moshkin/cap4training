@@ -1,5 +1,5 @@
 ---
-title: NOUVEAUTE BLOGG
+title: ENGLISH BLOG
 created_at: 2024-03-11T13:16:03.169Z
 updated_at: 2024-03-11T13:16:04.769Z
 short_description: short description
