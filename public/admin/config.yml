@@ -60,7 +60,7 @@ collections:
       # Short description
       - { label: 'Short Description', name: 'short_description', widget: 'text', i18n: true , required: true }
       # Long description
-      - { label: 'Long Description', name: 'long_description', widget: 'markdown', i18n: true  , required: true}
+      - { label: 'Long Description', name: 'long_description', widget: 'markdown', editor_components: [],  buttons: ['bulleted-list', 'numbered-list', 'link'], i18n: true  , required: true}
       # Requirements
       - { label: 'Requirements', name: 'requirements', widget: 'markdown', editor_components: [],  buttons: ['bulleted-list', 'numbered-list', 'link'], i18n: true , required: true }
       # Covered skills
@@ -114,9 +114,10 @@ collections:
     folder: 'content/session'
     format: 'frontmatter'
     create: true
-    slug: '{{slug}}'
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     fields:
-      - { label: 'Training', name: 'training', widget: 'relation', collection: 'training', value_field: 'title', search_fields: ['title'], required: true }
+    
+      - { label: 'Title', name: 'title', widget: 'relation', collection: 'training', value_field: 'title', search_fields: ['title'], required: true }
       - { label: 'Online', name: 'online', widget: 'boolean', required: false}
       - { label: 'Date', name: 'date_session', widget: 'datetime', required: true}
       - { label: 'Language', name: 'language', widget: 'select', options: ['en', 'fr'], required: true }
