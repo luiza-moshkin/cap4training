@@ -111,7 +111,6 @@ collections:
 
   - name: 'session'
     label: 'Session'
-    summary: "Version: {{version}} - {{title}}"
     folder: 'content/session'
     format: 'frontmatter'
     create: true
