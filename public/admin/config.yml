@@ -111,15 +111,22 @@ collections:
 
   - name: 'session'
     label: 'Session'
+    summary: "Version: {{version}} - {{title}}"
     folder: 'content/session'
     format: 'frontmatter'
     create: true
+    summary: '{{fields.date_session}} {{fields.training}}'
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     fields:
-      - { label: 'Title', name: 'title', widget: 'hidden', required: true, default: "{{fields.training}} - {{fields.date_session}}"}
+    # Title
+      - { label: 'Title', name: 'title', widget: 'hidden', required: false}
+    # Training
       - { label: 'Training', name: 'training', widget: 'relation', collection: 'training', value_field: 'title', search_fields: ['title'], required: true }
+    # Online 
       - { label: 'Online', name: 'online', widget: 'boolean', required: false}
+    # Date
       - { label: 'Date', name: 'date_session', widget: 'datetime', required: true}
+    # Language
       - { label: 'Language', name: 'language', widget: 'select', options: ['en', 'fr'], required: true }
 
 
