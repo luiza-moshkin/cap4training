@@ -20,6 +20,7 @@ public_folder: /img
 collections:
   - name: 'blog'
     label: 'Blog'
+    i18n: true
     folder: 'content/blog'
     format: 'frontmatter'
     create: true
@@ -39,7 +40,7 @@ collections:
     format: 'frontmatter'
     create: true
     slug: '{{slug}}'
-
+    i18n: true
     fields:
       - { label: 'Title', name: 'title', widget: 'string', required: true, i18n: true  }
       - { label: 'Creation Date', name: 'created_at', widget: 'datetime', required: false, default: 'now' }
@@ -70,6 +71,7 @@ collections:
 
   - name: 'category'
     label: 'Category'
+    i18n: true
     folder: 'content/category'
     format: 'frontmatter'
     create: true
