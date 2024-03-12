@@ -20,7 +20,7 @@
       <v-container>
         <v-list>
           <v-list-item class="mb-2" v-for="category of categorys">
-              <NuxtLink :to="category._path">
+              <NuxtLink :to="`${category._path}`">
               {{ category.title }}
             </NuxtLink>
           </v-list-item>

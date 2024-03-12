@@ -7,8 +7,6 @@ const params = route.params;
 var category = params.category;
 const lang = params.language;
 
-category = "Cyber security"
-category = category.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "") 
 console.log(category);
 
 const formations = await queryContent(`/training/${lang}/`).where({ category : category}).sort({ date: -1 }).find();

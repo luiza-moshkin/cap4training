@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const locale = process.client ? navigator.language : ''; 
 const browserLanguage = locale.substr(0, 2).toLowerCase(); // en-US to en
-const posts = await queryContent("/category/" + browserLanguage + "/").sort({ date: -1 }).find();
+const posts = await queryContent("/training/" + browserLanguage + "/").sort({ date: -1 }).find();
 </script>
 <template>
     All formation
