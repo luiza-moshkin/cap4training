@@ -118,7 +118,7 @@ collections:
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     fields:
     # Title
-    - { label: 'Title', name: 'title', widget: 'hidden', required: false}
+    - { label: 'Title', name: 'title', widget: 'string', required: false}
 
     - { label: 'TitleId', name: 'titleId', widget: 'hidden', i18n: true, required: false, default: '{{year}}-{{month}}-{{day}}-{{slug}}'}
 
