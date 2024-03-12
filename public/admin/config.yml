@@ -55,7 +55,7 @@ collections:
       - { label: 'Title', name: 'title', widget: 'string', i18n: true, required: true}
 
       # Category with titleId of the category
-      - { label: 'Category', name: 'category', widget: 'relation', collection: 'category', value_field: 'titleId', search_fields: ['title'], required: true}
+      - { label: 'Category', name: 'category', widget: 'relation', collection: 'category', value_field: '{{slug}}', search_fields: ['title'], required: true}
       # Image
       - { label: 'Featured Image', name: 'featured_image', widget: 'image', i18n: duplicate, required: true }
       # Short description
@@ -109,7 +109,6 @@ collections:
     fields:
       - { label: 'Title', name: 'title', widget: 'string', required: true, i18n: true }
       
-      - { label: 'TitleId', name: 'titleId', widget: 'hidden', required: false, default: '{{slug}}'}
       - { label: 'Description', name: 'description', widget: 'string', required: false, i18n: duplicate}
 
   - name: 'session'
