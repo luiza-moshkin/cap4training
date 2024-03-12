@@ -109,7 +109,7 @@ collections:
     fields:
       - { label: 'Title', name: 'title', widget: 'string', required: true, i18n: true }
       
-      - { label: 'TitleId', name: 'titleId', widget: 'hidden', required: false, default: '{{year}}-{{month}}-{{day}}-{{slug}}'}
+      - { label: 'TitleId', name: 'titleId', widget: 'hidden', required: false, default: '{{slug}}'}
       - { label: 'Description', name: 'description', widget: 'string', required: false, i18n: duplicate}
 
   - name: 'session'
@@ -121,7 +121,6 @@ collections:
     fields:
     # Title
       - { label: 'Title', name: 'title', widget: 'string', required: false}
-
 
     # Training
       - { label: 'Training', name: 'training', widget: 'relation', collection: 'training', value_field: 'title', search_fields: ['title'], required: true }
