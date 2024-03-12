@@ -5,6 +5,8 @@
 const route = useRoute();
 const params = route.params;
 var category = params.category;
+
+// const browserLanguage
 const lang = params.language;
 
 console.log(category);
