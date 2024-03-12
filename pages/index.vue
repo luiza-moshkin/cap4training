@@ -45,8 +45,8 @@
 const locale = process.client ? navigator.language : '';
 
 // browserLanguage qui fonctionne que en local mais pas sur netlify j'ai 
-const browserLanguage = locale.substr(0, 2).toLowerCase(); // en-US to en
-const categorys = await queryContent("/category/" + browserLanguage + "/").sort({ date: -1 }).find(); // fetch category
+// const browserLanguage = locale.substr(0, 2).toLowerCase(); // en-US to en
+const categorys = await queryContent("/category/fr/").sort({ date: -1 }).find(); // fetch category
 
 const items = ref([
   {
