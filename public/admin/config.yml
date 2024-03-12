@@ -54,7 +54,7 @@ collections:
       # Title
       - { label: 'Title', name: 'title', widget: 'string', i18n: true, required: true}
       # Category
-      - { label: 'Category', name: 'category', widget: 'relation', collection: 'category', value_field: 'title', search_fields: ['title'], required: true}
+      - { label: 'Category', name: 'category', widget: 'relation', collection: 'category', value_field: 'slug', search_fields: ['title'], required: true}
       # Image
       - { label: 'Featured Image', name: 'featured_image', widget: 'image', i18n: duplicate, required: true }
       # Short description
