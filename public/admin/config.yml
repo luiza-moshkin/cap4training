@@ -49,9 +49,6 @@ collections:
     format: 'frontmatter'
     create: true
     slug: '{{slug}}'
-      encoding: "ascii"
-      clean_accents: true
-      sanitize_replacement: "_"
     i18n: true
     fields:
       # Title
