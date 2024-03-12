@@ -48,7 +48,7 @@ collections:
     folder: 'content/training'
     format: 'frontmatter'
     create: true
-    slug:
+    slug: '{{slug}}'
       encoding: "ascii"
       clean_accents: true
       sanitize_replacement: "_"
