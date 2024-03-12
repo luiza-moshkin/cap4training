@@ -49,12 +49,13 @@ collections:
     format: 'frontmatter'
     create: true
     slug: '{{slug}}'
-    i18n: true  
+    i18n: true
     fields:
       # Title
       - { label: 'Title', name: 'title', widget: 'string', i18n: true, required: true}
-      # Category
-      - { label: 'Category', name: 'category', widget: 'relation', collection: 'category', value_field: 'title', search_fields: ['title'], required: true}
+
+      # Category with titleId of the category
+      - { label: 'Category', name: 'category', widget: 'relation', collection: 'category', value_field: 'titleId', search_fields: ['title'], required: true}
       # Image
       - { label: 'Featured Image', name: 'featured_image', widget: 'image', i18n: duplicate, required: true }
       # Short description
@@ -117,7 +118,10 @@ collections:
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     fields:
     # Title
-      - { label: 'Title', name: 'title', widget: 'hidden', required: false}
+    - { label: 'Title', name: 'title', widget: 'hidden', required: false}
+
+    - { label: 'TitleId', name: 'titleId', widget: 'hidden', i18n: true, required: false, default: '{{year}}-{{month}}-{{day}}-{{slug}}'}
+
     # Training
       - { label: 'Training', name: 'training', widget: 'relation', collection: 'training', value_field: 'title', search_fields: ['title'], required: true }
     # Online 
