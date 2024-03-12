@@ -16,11 +16,6 @@ backend:
 
 
 
-slug:
-  encoding:                             unicode
-  clean_accents:                        true
-  sanitize_replacement:                 "_"
-
 
 media_folder: public/img
 public_folder: /img
