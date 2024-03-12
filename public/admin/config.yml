@@ -14,6 +14,14 @@ backend:
     deleteMedia: "Delete media {{path}}"
     openAuthoring: "{{message}}"
 
+
+
+slug:
+  encoding:                             unicode
+  clean_accents:                        true
+  sanitize_replacement:                 "_"
+
+
 media_folder: public/img
 public_folder: /img
 
@@ -48,10 +56,7 @@ collections:
     folder: 'content/training'
     format: 'frontmatter'
     create: true
-    slug:
-      encoding: "ascii"
-      clean_accents: true
-      sanitize_replacement: "_"
+    slug: '{{slug}}'
     i18n: true
     fields:
       # Title
