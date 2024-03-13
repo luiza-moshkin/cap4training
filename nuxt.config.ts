@@ -5,7 +5,7 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     'nuxt-icon'
   ],
-  css: ["vuetify/lib/styles/main.sass"],
+  css: ["@/assets/scss/main.scss"],
   build: {
     transpile: ["vuetify"],
   },
@@ -20,5 +20,5 @@ export default defineNuxtConfig({
     plugins: {
       autoprefixer: {},
     },
-  },
+  }
 });
