@@ -13,10 +13,6 @@
 
 <template>
 
-<body id="js-body" class="js-menu-fixed">
-
-  c moi le body
-  </body>
 
 
 </template>
