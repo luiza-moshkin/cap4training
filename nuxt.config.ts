@@ -12,7 +12,6 @@ export default defineNuxtConfig({
   app: {
     buildAssetsDir: '/public/',
     head: {
-      htmlAttrs: { dir: 'rtl', lang: 'fa' },
       link: [{ rel: 'icon', type: 'image/png', href: "/public/ressource/favicon/favicon-32x32.png" }]
     },
   },

@@ -245,8 +245,6 @@
 
                       </div>
                         <div class="navbar-right">
-                            ""
-
                             <button class="navbar-search js-searchbar-opening btn btn-link pe-0">
                                 <svg class="icon icon-search "><use xlink:href="#icon-search"></use></svg>
                                 <span class="visually-hidden">Recherche</span>
