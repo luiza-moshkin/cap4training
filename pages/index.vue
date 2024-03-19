@@ -1,110 +1,40 @@
 <template>
-  <html :lang="locale">
-    <head>
-      <title>Cap4 Learning</title>
-    </head>
+<html lang="fr"><head>
+        <meta charset="UTF-8">
+        <title>
+             Nous sommes experts en formation  | Cap4Learning
+        </title>
 
+        <meta name="description" content=" Nous sommes experts en formation ">
+        <meta name="robots" content="all">
+        <meta name="keywords" content="">
 
-    <!--
-    <body>
+        <meta property="og:title" content=" Nous sommes experts en formation ">
+        <meta property="og:url" content="https://www.cap4learning.com/">
+        <meta property="og:type" content="website">
+        <meta property="og:description" content=" Nous sommes experts en formation ">
+        <meta property="og:image" content="https://www.cap4learning.com/static/img/sharing.jpg">
+                <meta property="og:locale" content="fr">
 
+        <meta name="twitter:card" content="summary">
 
-      
-      <v-container>
-        <v-list>
-          <v-list-item class="mb-2" v-for="(item, key) in items" :key="key">
-            <NuxtLink :to="item.to">
-              {{ item.title }}
-            </NuxtLink>
-          </v-list-item>
-        </v-list>
-      </v-container>
+        <link rel="apple-touch-icon" sizes="180x180" href="/public/ressource/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/public/ressource/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/public/ressource/favicon/favicon-16x16.png">
+        <link rel="manifest" href="/public/ressource/favicon/site.webmanifest">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      Category:
+                    <link rel="stylesheet" href="/build/2.fa9c4c04.css"><link rel="stylesheet" href="/build/app.4387c187.css">
+        </head>
 
-      <v-container>
-        <v-list>
-          <v-list-item class="mb-2" v-for="category of categorys">
-              <NuxtLink :to="`${category._path}`">
-              {{ category.title }}
-            </NuxtLink>
-          </v-list-item>
-        </v-list>
-      </v-container>
-
-
-
-
-
-    </body>    -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <meta name="description" content="We help people in developing their careers and skills.">
-<meta name="robots" content="all" />
-<meta name="keywords" content="{% block seoMetas %}{% endblock %}" />
-
-<meta property="og:title" content="fezafezafeza" />
-<meta property="og:type" content="website" />
-<meta property="og:description" content="fdsqfdsq" />
-<meta property="og:image" content="public/ressource/img/sharing.jpg" />
-<meta property="og:locale" content="FR" />
-
-<meta name="twitter:card" content="summary" />
-
-<link rel="apple-touch-icon" sizes="180x180" href="public/ressource/favicon/apple-touch-icon.png') }}">
-<link rel="icon" type="image/png" sizes="32x32" href="public/ressource/favicon/favicon-32x32.png') }}">
-<link rel="icon" type="image/png" sizes="16x16" href="public/ressource/favicon/favicon-16x16.png') }}">
-<link rel="manifest" href="public/ressource/favicon/site.webmanifest') }}">
-<meta name="msapplication-TileColor" content="#da532c">
-<meta name="theme-color" content="#ffffff">
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-
-
-
-
-
-
-<body id="js-body" class="js-menu-fixed">
-
-
-
-
-
-
-
-
-  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <body id="js-body" class="    js-menu-fixed -transparent
+">
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KTFC3WH" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
     <symbol id="icon-link" viewBox="0 0 32 32">
         <path d="M16 0c-8.833 0.008-15.992 7.167-16 15.999v0.001c0.008 8.833 7.167 15.992 15.999 16h0.001c8.833-0.008 15.992-7.167 16-15.999v-0.001c-0.008-8.833-7.167-15.992-15.999-16h-0.001zM21.524 17.077l-6.197 6.165c-0.267 0.27-0.638 0.438-1.048 0.438-0.010 0-0.020-0-0.030-0l0.002 0c-0.009 0-0.019 0-0.029 0-0.41 0-0.781-0.167-1.048-0.438l-0-0c-0.266-0.274-0.43-0.649-0.43-1.061s0.164-0.787 0.43-1.062l-0 0 5.153-5.12-5.12-5.12c-0.266-0.274-0.43-0.649-0.43-1.061s0.164-0.787 0.43-1.062l-0 0c0.274-0.266 0.649-0.43 1.061-0.43s0.787 0.164 1.062 0.43l-0-0 6.196 6.165c0.269 0.279 0.436 0.658 0.437 1.077v0c-0.008 0.418-0.173 0.795-0.438 1.078l0.001-0.001z"></path>
     </symbol>
@@ -192,11 +122,6 @@
         <path d="M16 0c-8.837 0-16 7.163-16 16s7.163 16 16 16c8.837 0 16-7.163 16-16v0c0-8.837-7.163-16-16-16v0zM16 26.948c-0.004 0-0.008 0-0.013 0-6.039 0-10.935-4.896-10.935-10.935 0-2.003 0.539-3.881 1.479-5.496l-0.028 0.052 14.933 14.933c-1.556 0.909-3.425 1.445-5.419 1.445-0.006 0-0.012 0-0.018 0h0.001zM25.497 21.436l-14.933-14.933c1.566-0.917 3.448-1.459 5.457-1.459 6.039 0 10.935 4.896 10.935 10.935 0 2.009-0.542 3.891-1.487 5.509l0.028-0.052z"></path>
     </symbol>
 </svg>
-
-
-
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KTFC3WH" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    
         <div id="awwwards" style="position: fixed; z-index: 999; transform: translateY(-50%); top: 50%; right: 0"><a href="https://www.awwwards.com/sites/cap-4-learning" target="_blank"><svg width="53.08" height="171.358"><path class="js-color-bg" fill="#03565c" d="M0 0h53.08v171.358H0z"></path><g class="js-color-text" fill="#fff"><path d="M20.047 153.665v-1.9h3.888v-4.093h-3.888v-1.9h10.231v1.9h-4.59v4.093h4.59v1.9zM29.898 142.236c-.331.565-.784.997-1.359 1.294s-1.222.446-1.944.446c-.721 0-1.369-.149-1.943-.446a3.316 3.316 0 0 1-1.36-1.294c-.331-.564-.497-1.232-.497-2.002s.166-1.438.497-2.002a3.316 3.316 0 0 1 1.36-1.294c.574-.297 1.223-.445 1.943-.445.723 0 1.369.148 1.944.445a3.307 3.307 0 0 1 1.359 1.294c.331.564.497 1.232.497 2.002s-.166 1.438-.497 2.002m-1.703-3.347c-.435-.33-.967-.496-1.601-.496-.633 0-1.166.166-1.601.496-.433.332-.649.78-.649 1.346 0 .564.217 1.013.649 1.345.435.331.968.497 1.601.497.634 0 1.166-.166 1.601-.497.435-.332.649-.78.649-1.345.001-.566-.214-1.014-.649-1.346M22.911 134.852v-1.813h1.186a3.335 3.335 0 0 1-.951-1.009 2.423 2.423 0 0 1-.352-1.271c0-.682.19-1.229.57-1.645.381-.413.932-.621 1.652-.621h5.262v1.812h-4.721c-.419 0-.727.096-.921.285-.195.19-.292.447-.292.769 0 .302.115.58.35.833.234.254.577.458 1.03.613.454.156.993.234 1.616.234h2.938v1.813h-7.367zM29.898 125.136a3.314 3.314 0 0 1-1.359 1.294c-.575.297-1.222.445-1.944.445-.721 0-1.369-.148-1.943-.445a3.322 3.322 0 0 1-1.36-1.294c-.331-.565-.497-1.232-.497-2.002 0-.771.166-1.438.497-2.003a3.313 3.313 0 0 1 1.36-1.293c.574-.297 1.223-.446 1.943-.446.723 0 1.369.149 1.944.446s1.028.728 1.359 1.293.497 1.232.497 2.003c.001.769-.166 1.436-.497 2.002m-1.703-3.347c-.435-.331-.967-.497-1.601-.497-.633 0-1.166.166-1.601.497-.433.331-.649.778-.649 1.345 0 .564.217 1.013.649 1.344.435.332.968.498 1.601.498.634 0 1.166-.166 1.601-.498.435-.331.649-.779.649-1.344.001-.567-.214-1.014-.649-1.345M22.911 117.75v-1.812h1.199c-.419-.265-.742-.586-.972-.966s-.345-.784-.345-1.213c0-.272.05-.569.146-.892l1.682.336a1.429 1.429 0 0 0-.205.76c0 .576.261 1.048.783 1.418.521.37 1.342.557 2.461.557h2.617v1.812h-7.366zM29.812 111.252c-.391.511-.857.851-1.403 1.016l-.776-1.446c.381-.138.68-.329.893-.577.215-.249.321-.544.321-.885a1.2 1.2 0 0 0-.168-.658c-.112-.175-.294-.263-.548-.263-.225 0-.406.105-.548.313-.142.21-.291.534-.446.973-.019.068-.058.17-.117.307-.224.565-.506 1.004-.848 1.315-.34.313-.779.467-1.314.467-.381 0-.727-.102-1.039-.306a2.185 2.185 0 0 1-.744-.84 2.554 2.554 0 0 1-.279-1.207c0-.497.105-.949.314-1.359.211-.408.506-.725.886-.949l.993 1.082c-.43.292-.644.686-.644 1.184a.84.84 0 0 0 .154.504.471.471 0 0 0 .401.212c.176 0 .338-.103.49-.307.15-.205.334-.604.547-1.199.205-.564.474-1.001.805-1.308.332-.308.756-.46 1.271-.46.721 0 1.299.229 1.732.687s.65 1.057.65 1.797c.001.759-.194 1.396-.583 1.907M35.481 17.006l-4.782 14.969h-3.266l-2.584-9.682-2.584 9.682h-3.268l-4.782-14.969h3.713l2.673 10.276 2.525-10.276h3.445l2.524 10.276 2.674-10.276zM37.978 27.163c1.426 0 2.496 1.068 2.496 2.495 0 1.425-1.07 2.495-2.496 2.495-1.425 0-2.494-1.07-2.494-2.495-.001-1.427 1.069-2.495 2.494-2.495"></path></g></svg></a></div>
         <header class="header">
             <nav class="navbar navbar-expand-lg">
@@ -208,43 +133,63 @@
                         <svg class="icon icon-menu-open"><use xlink:href="#icon-menu-open"></use></svg>
                         <svg class="icon icon-menu-close"><use xlink:href="#icon-menu-close"></use></svg>
                     </button>
-                    <div class="collapse navbar-collapse align-items-start js-hover-triggering" id="navbarNav" >
-                      <div class="navbar-left">
-                        <ul class="navbar-nav">
-                          <li class="nav-item current first">      
-                            <a href="/cap4learning/public/" class="nav-link">
-                              Accueil
-                            </a>        
-                          </li>
-                          <li class="nav-item dropdown">        
-                            <a href="#" class="nav-link dropdown-toggle base-link" data-toggle="dropdown" role="button" aria-expanded="false" data-bs-toggle="dropdown" id="courses_list">
-                              Formations
-                            </a>                
-                            <ul class="dropdown-menu menu_level_1" aria-labelled-by="courses_list">
-                            <li class="first">        
-                              <a href="/cap4learning/public/formation/recherche/all">
-                                Toutes
-                              </a>        
-                            </li>
+                    <div class="collapse navbar-collapse align-items-start js-hover-triggering" id="navbarNav">
+                        <div class="navbar-left">
+                                    <ul class="navbar-nav">
+            
+                <li class="nav-item active first">        <a href="/" class="nav-link">Accueil</a>        
+    </li>
 
-                            <li class="last">
-                              <a href="/cap4learning/public/formation-sur-mesure">
-                                Sur-mesure
-                              </a>        
-                            </li>
-                          </ul>
+    
+                            <li class="nav-item dropdown">        <a href="#" class="nav-link dropdown-toggle base-link" data-toggle="dropdown" role="button" aria-expanded="false" data-bs-toggle="dropdown" id="courses_list">Formations</a>                <ul class="dropdown-menu menu_level_1" aria-labelled-by="courses_list">
+            
+                <li class="first">        <a href="/formation/recherche/all">Toutes</a>        
+    </li>
 
-                          </li>
-                            <li class="nav-item">        <a href="/cap4learning/public/actualites" class="nav-link">Actualités</a>        
-                          </li>
-                            <li class="nav-item last">        <a href="/cap4learning/public/contact" class="nav-link">Contact</a>        
-                          </li>
+    
+                <li>        <a href="/formation/recherche/formations-api">API</a>        
+    </li>
+
+    
+                <li>        <a href="/formation/recherche/formations-cybersecurite">Cybersécurité</a>        
+    </li>
+
+    
+                <li>        <a href="/formation/recherche/formations-mulesoft">MuleSoft</a>        
+    </li>
+
+    
+                <li>        <a href="/formation/recherche/outils-business-intelligence">Outils BI</a>        
+    </li>
+
+    
+                <li>        <a href="/formation/recherche/formations-rgpd">RGPD</a>        
+    </li>
+
+    
+                <li class="last">        <a href="/formation-sur-mesure">Sur-mesure</a>        
+    </li>
 
 
-                        </ul>
+    </ul>
 
-                      </div>
+    </li>
+
+    
+                <li class="nav-item">        <a href="/actualites" class="nav-link">Actualités</a>        
+    </li>
+
+    
+                <li class="nav-item last">        <a href="/contact" class="nav-link">Contact</a>        
+    </li>
+
+
+    </ul>
+
+                        </div>
                         <div class="navbar-right">
+                            
+
                             <button class="navbar-search js-searchbar-opening btn btn-link pe-0">
                                 <svg class="icon icon-search "><use xlink:href="#icon-search"></use></svg>
                                 <span class="visually-hidden">Recherche</span>
@@ -255,25 +200,437 @@
             </nav>
         </header>
 
-
-
-
-
-                {% block body %}
-
-
-
-
-
-
-          <main class="main" id="js-main">
+        <main class="main" id="js-main">
             <div class="container-fluid -corner">
                 <div class="overflower -top"></div>
 
+                                                    
+                
+    <div class="row justify-content-center">
+        <div class="col-10">
+            <section class="home__intro" id="home-intro">
+                <h1 class="home__intro-title">Nous sommes experts en formation</h1>
+                <p class="home__intro-desc">Nous aidons nos clients à développer leur carrière et leurs compétences.</p>
+                <div class="home__intro-list">
+                    <img class="home__intro-img" src="/public/ressource/img/home/cap4_intro_blue.jpg" alt="Cap4Learning - introduction blue picture">
+                    <img class="home__intro-img" src="/public/ressource/img/home/cap4_intro_pink.jpg" alt="Cap4Learning - introduction pink picture ">
+                    <img class="home__intro-img" src="/public/ressource/img/home/cap4_intro_yellow.jpg" alt="Cap4Learning - introduction yellow picture">
+                    <img class="home__intro-img" src="/public/ressource/img/home/cap4_intro_purple.jpg" alt="Cap4Learning - introduction blue picture">
 
+                    <div class="home__intro-circles">
+                        <span class="animated-circle -pink"></span>
+                        <span class="animated-circle -small"></span>
+                        <span class="animated-circle"></span>
+                        <span class="animated-circle"></span>
+                        <span class="animated-circle -medium -pink"></span>
+                        <span class="animated-circle -small"></span>
+                        <span class="animated-circle -medium"></span>
+                    </div>
+                </div>
+             </section>
+        </div>
+    </div>
 
+    <div class="row">
+        <div class="col-12 px-0">
+            <section class="home__training" id="home-training">
+                <div class="home__training-listing">
+                    <div class="home__training-search js-animation" id="home-search-bar">
+                        <form name="training_search" method="get" action="/formation/recherche/all">
+                             <svg class="icon icon-search "><use xlink:href="#icon-search"></use></svg>
+                            <div class="form-floating form-group"><input type="text" id="training_search_title" name="training_search[title]" placeholder=" " class="form-control"><label for="training_search_title">Recherche</label></div>
+                            <span class="d-none"> <div class="-spaced form-group"><div class="form-check">        <input type="checkbox" id="training_search_eligibleCpf" name="training_search[eligibleCpf]" class="form-check-input" value="1">
+        <label class="form-check-label" for="training_search_eligibleCpf">seulement les formations éligibles au CPF</label></div></div></span>
+                            <div class="btn-fx-wrapper">
+                                <span class="btn-fx-circle"></span>
+                                <button type="submit" class="btn btn-primary btn-fx-container">
+                                    <span class="btn-fx-inner">
+                                        Trouver!
+                                    </span>
+                                </button>
+                            </div>
+                        <input type="hidden" id="training_search__token" name="training_search[_token]" value="7Tf8JoaYYW3R7mmDGQ_dEP36E9LWYTrbcabfpwRZ7M0"></form>
+                    </div>
 
-<div class="searchbar js-animation" id="searchbar">
+                    <div class="js-animation" id="home-training-list">
+
+                        <h2 class="h3">
+                            Nos formations à la une:
+                        </h2>
+
+                        <div class="home__training-list">
+                                                            <article class="training-teaser">
+    <div class="training-teaser__wrapper">
+        <div class="training-teaser__tile">
+            <div class="training-teaser__inside">
+                <h3 class="training-teaser__title">
+                    Exploitation Anypoint Platform : CloudHub 2.0
+                </h3>
+                <a href="/formation/formations-mulesoft/exploitation-anypoint-platform-cloudhub-20" class="training-teaser__link stretched-link">
+                    <span class="visually-hidden">En savoir plus</span>
+                    <svg class="icon icon-link"><use xlink:href="#icon-link"></use></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</article>                                                            <article class="training-teaser">
+    <div class="training-teaser__wrapper">
+        <div class="training-teaser__tile">
+            <div class="training-teaser__inside">
+                <h3 class="training-teaser__title">
+                    Architecture Anypoint Platform : Application Networks
+                </h3>
+                <a href="/formation/formations-mulesoft/architecture-anypoint-platform-application-networks" class="training-teaser__link stretched-link">
+                    <span class="visually-hidden">En savoir plus</span>
+                    <svg class="icon icon-link"><use xlink:href="#icon-link"></use></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</article>                                                            <article class="training-teaser">
+    <div class="training-teaser__wrapper">
+        <div class="training-teaser__tile">
+            <div class="training-teaser__inside">
+                <h3 class="training-teaser__title">
+                    Devenir développeur d'API avec Python
+                </h3>
+                <a href="/formation/formations-api/devenir-developpeur-dapi-avec-python" class="training-teaser__link stretched-link">
+                    <span class="visually-hidden">En savoir plus</span>
+                    <svg class="icon icon-link"><use xlink:href="#icon-link"></use></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</article>                                                            <article class="training-teaser">
+    <div class="training-teaser__wrapper">
+        <div class="training-teaser__tile">
+            <div class="training-teaser__inside">
+                <h3 class="training-teaser__title">
+                    Les attaques par ingénierie sociale
+                </h3>
+                <a href="/formation/formations-cybersecurite/les-attaques-par-ingenierie-sociale" class="training-teaser__link stretched-link">
+                    <span class="visually-hidden">En savoir plus</span>
+                    <svg class="icon icon-link"><use xlink:href="#icon-link"></use></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</article>                                                            <article class="training-teaser">
+    <div class="training-teaser__wrapper">
+        <div class="training-teaser__tile">
+            <div class="training-teaser__inside">
+                <h3 class="training-teaser__title">
+                    Développement Anypoint Platform DataWeave (Mule 4)*
+                </h3>
+                <a href="/formation/formations-mulesoft/developpement-anypoint-platform-dataweave-mule-4" class="training-teaser__link stretched-link">
+                    <span class="visually-hidden">En savoir plus</span>
+                    <svg class="icon icon-link"><use xlink:href="#icon-link"></use></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</article>                            
+                            <article class="training-teaser -discover">
+                                <div class="training-teaser__tile">
+                                    <div class="training-teaser__inside">
+                                        <h3 class="training-teaser__title">
+                                            Consulter le <br> catalogue complet
+                                        </h3>
+                                        <a href="/formation/recherche/all" class="training-teaser__link stretched-link">
+                                            <span class="visually-hidden">En savoir plus</span>
+                                            <svg class="icon icon-link"><use xlink:href="#icon-link"></use></svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="home__training-dropdown dropdown">
+                            <button class="btn btn-underline dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                Nos formations par catégorie
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <li><a class="dropdown-item" href="/formation/recherche/all">Toutes</a></li>
+                                                                    <li><a class="dropdown-item" href="/formation/recherche/formations-api">API</a></li>
+                                                                    <li><a class="dropdown-item" href="/formation/recherche/formations-cybersecurite">Cybersécurité</a></li>
+                                                                    <li><a class="dropdown-item" href="/formation/recherche/formations-mulesoft">MuleSoft</a></li>
+                                                                    <li><a class="dropdown-item" href="/formation/recherche/outils-business-intelligence">Outils BI</a></li>
+                                                                    <li><a class="dropdown-item" href="/formation/recherche/formations-rgpd">RGPD</a></li>
+                                                                <li><a class="dropdown-item" href="/formation-sur-mesure">Sur-mesure</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="home__training-content js-animation animate__slow animate__delay-05" id="home-training-content">
+                    <img class="home__training-img" src="/public/ressource/img/home/cap4_training.jpg" alt="Cap4Learning -  Atteindre vos objectifs professionnels">
+                    <h2 class="home__training-title">
+                        Atteindre vos objectifs professionnels
+                    </h2>
+                    <p class="home__training-desc">
+                        Visez l'excellence grâce à nos parcours de formation dédiés.
+                    </p>
+                    <div class="home__training-circles">
+                        <span class="animated-circle -pink"></span>
+                        <span class="animated-circle -medium -pink"></span>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-10">
+            <section class="home__offers" id="home-offer">
+                <div class="home__offers-content js-animation" id="home-offer-content">
+                    <h2 class="home__offers-title">
+                        Ce que nous proposons<span class="text-secondary">.</span> <br>+ ce que nous réalisons<span class="text-white">.</span>
+                    </h2>
+                    <p class="home__training-desc">
+                        Qu'elles soient en inter- ou intra-entreprise, toutes nos formations sont basées sur des scenarios pédagogiques développés avec la plus grande attention. Les contenus de formations sont revus et mis à jour régulièrement pour en assurer la meilleure pertinence.
+                    </p>
+                    <p class="home__training-desc mt-3">
+                        Nous accordons une attention particulière à l'accueil des personnes en situation de handicap physique. Que ce soit pour des formations présentielles ou à distance, nous recommandons au participant dès son inscription de signaler la nature de son handicap et ses besoins spécifiques. Nous mettrons tout en oeuvre pour que la formation se déroule dans les meilleures conditions. Pour tout renseignement concernant l'accueil des personnes en situation de handicap, <a href="/contact">contactez-nous</a>
+                    </p>
+                </div>
+
+                <div class="home__offers-listing js-animation animate__slow" id="home-offer-listing">
+                    <div class="js-offer-expandable offer">
+                        <div class="offer__wrapper">
+                            <h3 class="offer__title">
+                                Innovation
+                            </h3>
+                            <div class="offer__content">
+                                <div class="offer__close js-offer-close">
+                                    <span class="visually-hidden">Fermer</span>
+                                    <svg class="icon icon-cross"><use xlink:href="#icon-cross"></use></svg>
+                                </div>
+                                <p class="offer__description">
+                                    Le développement des compétences opérationnelles est au coeur de notre métier. Nous veillons à anticiper les besoins de nos clients, à ajuster le contenu de nos formations pour satisfaire aux demandes les plus pointues des entreprises et à intégrer le meilleur des innovations pédagogiques.
+                                </p>
+                            </div>
+                            <a href="#" class="offer__cta">
+                                <span class="visually-hidden">En savoir plus</span>
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <div class="js-offer-expandable offer -big">
+                        <div class="offer__wrapper">
+                            <h3 class="offer__title">
+                                Développez vos compétences
+                            </h3>
+                            <div class="offer__content">
+                                <div class="offer__close js-offer-close">
+                                    <span class="visually-hidden">Fermer</span>
+                                    <svg class="icon icon-cross"><use xlink:href="#icon-cross"></use></svg>
+                                </div>
+                                <p class="offer__description">
+                                    Nous utilisons les méthodes les plus adaptées aux compétences visées par nos formations. e-learning, blended learning, tutorat, vidéo, présentiel, séminaire... la méthode est toujours au service du contenu. C'est en étudiant les objectifs professionnels que nous concevons des parcours pédagogiques parfaitement adaptés aux métiers porteurs auquels nous préparons les apprenants.
+                                </p>
+                            </div>
+                            <a href="#" class="offer__cta">
+                                <span class="visually-hidden">En savoir plus</span>
+                                <svg class="icon icon-link"><use xlink:href="#icon-link"></use></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="js-offer-expandable offer -big">
+                        <div class="offer__wrapper">
+                            <h3 class="offer__title">
+                                Apprendre un <br>nouveau métier porteur
+                            </h3>
+                            <div class="offer__content">
+                                <div class="offer__close js-offer-close">
+                                    <span class="visually-hidden">Fermer</span>
+                                    <svg class="icon icon-cross"><use xlink:href="#icon-cross"></use></svg>
+                                </div>
+                                <p class="offer__description">
+                                    Les besoins des entreprises en termes de ressources IT sont de plus en plus importants. Par conséquent, les profils d’expert IT, au sens large, et les métiers du numérique deviennent incontournables dans le monde de l'entreprise. Nos formations vous permettent d’obtenir le socle de savoirs pour devenir de futurs experts
+                                </p>
+                            </div>
+                            <a href="#" class="offer__cta">
+                                <span class="visually-hidden">En savoir plus</span>
+                                <svg class="icon icon-link"><use xlink:href="#icon-link"></use></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="js-offer-expandable offer">
+                        <div class="offer__wrapper">
+                            <h3 class="offer__title">
+                                Formation continue
+                            </h3>
+                            <div class="offer__content">
+                                <div class="offer__close js-offer-close">
+                                    <span class="visually-hidden">Fermer</span>
+                                    <svg class="icon icon-cross"><use xlink:href="#icon-cross"></use></svg>
+                                </div>
+                                <p class="offer__description">
+                                    Le maintien des compétences des formateurs est un ingrédient essentiel d'une formation de qualité. En plus de bénéficier d'une expérience terrain et d'un niveau d'expertise démontrable (certifications...) tous nos formateurs continuent à se former continuellement, tant sur leurs domaines d'intervention qu'aux méthodes pédagogiques qu'ils utilisent.
+                                </p>
+                            </div>
+                            <a href="#" class="offer__cta">
+                                <span class="visually-hidden">En savoir plus</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="js-offer-expandable offer -big">
+                        <div class="offer__wrapper">
+                            <h3 class="offer__title">
+                                Profitez de l'expérience de nos formateurs
+                            </h3>
+                            <div class="offer__content">
+                                <div class="offer__close js-offer-close">
+                                    <span class="visually-hidden">Fermer</span>
+                                    <svg class="icon icon-cross"><use xlink:href="#icon-cross"></use></svg>
+                                </div>
+                                <p class="offer__description">
+                                    Nos formateurs sont autant pédagogues qu’experts dans leurs domaines d’intervention. Nous accompagnons les stagiaires dans la mise en œuvre de leurs acquis et nous proposons notre savoir- faire pour obtenir des résultats tout au long de leur carrière sous la forme de nouvelles compétences. La formation, c’est notre métier.
+                                </p>
+                            </div>
+                            <a href="#" class="offer__cta">
+                                <span class="visually-hidden">En savoir plus</span>
+                                <svg class="icon icon-link"><use xlink:href="#icon-link"></use></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="js-offer-expandable offer -big">
+                        <div class="offer__wrapper">
+                            <h3 class="offer__title">
+                                Une ingénierie pédagogique éprouvée
+                            </h3>
+                            <div class="offer__content">
+                                <div class="offer__close js-offer-close">
+                                    <span class="visually-hidden">Fermer</span>
+                                    <svg class="icon icon-cross"><use xlink:href="#icon-cross"></use></svg>
+                                </div>
+                                <p class="offer__description">
+                                    CAP4 LEARNING possède une ingénierie pédagogique éprouvée basée sur des scénarios pédagogiques pour toutes les formations réalisées qu’elles soient en inter ou en intra entreprises. Au moins une fois par an, les contenus de formations inter-entreprises sont examinés et peuvent parfois faire l’objet de réingénierie pédagogique si nécessaire.
+                                </p>
+                            </div>
+                            <a href="#" class="offer__cta">
+                                <span class="visually-hidden">En savoir plus</span>
+                                <svg class="icon icon-link"><use xlink:href="#icon-link"></use></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="js-offer-expandable offer">
+                        <div class="offer__wrapper">
+                            <h3 class="offer__title">
+                                Notre contrôle qualité
+                            </h3>
+                            <div class="offer__content">
+                                <div class="offer__close js-offer-close">
+                                    <span class="visually-hidden">Fermer</span>
+                                    <svg class="icon icon-cross"><use xlink:href="#icon-cross"></use></svg>
+                                </div>
+                                <p class="offer__description">
+                                    La qualité est au coeur de toutes nos actions. Nous mettons en oeuvre tous les contrôles nécessaires à assurer que le contenu des formations est toujours en adéquation avec les objectifs pédagogiques proposés et les besoins de nos stagiaires
+                                </p>
+                            </div>
+                            <a href="#" class="offer__cta">
+                                <span class="visually-hidden">En savoir plus</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="js-offer-expandable offer">
+                        <div class="offer__wrapper">
+                            <h3 class="offer__title">
+                                Ecouter et conseiller
+                            </h3>
+                            <div class="offer__content">
+                                <div class="offer__close js-offer-close">
+                                    <span class="visually-hidden">Fermer</span>
+                                    <svg class="icon icon-cross"><use xlink:href="#icon-cross"></use></svg>
+                                </div>
+                                <p class="offer__description">
+                                    Our training is for women and men who trust us to develop the skills needed to grow their carreer. We always listen and strive to help our clients build training plans, advise students in the development of their competencies and measure the impact of our training in their learning experience.
+                                </p>
+                            </div>
+                            <a href="#" class="offer__cta">
+                                <span class="visually-hidden">En savoir plus</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <img src="/public/ressource/img/home/cap4_offer.svg" alt="Cap4Learning : Offers" class="logo-offer">
+                </div>
+            </section>
+
+            <section class="my-5 py-lg-5 text-center">
+                <h2>En quelques chiffres :</h2>
+                <p class="h2">28 sessions de formations en 2021, 13 client B2B et 128 stagiaires</p>
+            </section>
+        </div>
+    </div>
+
+    <div class="row mt-3">
+        <div class="col-6 col-md-2 offset-md-1 position-relative js-animation" id="home-newsletter-img">
+            <img src="/public/ressource/img/home/cap4_newsletter.jpg" class="home__nl-img" alt="Cap4Learning - Nous sommes experts en formation">
+            <div class="home__nl-circles">
+                <span class="animated-circle"></span>
+                <span class="animated-circle -medium"></span>
+            </div>
+        </div>
+
+        <div class="col-10 offset-1 offset-1 col-md-8 offset-md-0">
+            <div class="home__nl js-animation" id="home-newsletter">
+                <h2 class="home__nl-title">Rester informé</h2>
+                <p class="home__nl-desc">
+                    Inscrivez-vous à notre newsletter pour recevoir les actualités de Cap4 Learning.
+                </p>
+                <div id="mlb2-3523522" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-3523522">
+                    <form class="form -nl nl-row-form" action="https://static.mailerlite.com/webforms/submit/l4m8c9" data-code="l4m8c9" method="post" target="_blank">
+                        <div class="form-floating form-group ml-field-email ml-validate-email">
+                            <input type="email" id="fields[email]" name="fields[email]" required="required" placeholder=" " class="form-control" aria-invalid="false">
+                            <label for="fields[email]">votre adresse email</label>
+                        </div>
+
+                        <div class="d-flex flex-column flex-lg-row justify-content-between align-items-center mt-4">
+                            <div class="d-none">
+                                <div class="form-check justify-content-between justify-content-lg-start mb-3 mb-lg-0 w-75">
+                                    <input type="checkbox" class="form-check-input" name="checkbox_nl" id="checkbox_nl" checked="" required="required" aria-invalid="false">
+                                    <label class="form-check-label" for="checkbox_nl">
+                                        __I agree to terms &amp; conditions
+                                    </label>
+                                    <input type="hidden" class="visually-hidden" name="ml-submit" value="1" aria-invalid="false">
+                                </div>
+                            </div>
+
+                            <small>
+                                Votre email est uniquement utilisé pour vous envoyer nos newsletters. <br>Vous pouvez à tout moment utiliser le lien de désabonnement intégré dans la newsletter.
+                            </small>
+                            <div class="btn-fx-wrapper -fixed mt-3 mt-lg-0">
+                                <span class="btn-fx-circle"></span>
+                                <button type="submit" class="btn btn-white">
+                                     <span class="btn-fx-inner">
+                                         S'inscrire
+                                     </span>
+                                </button>
+                            </div>
+                        </div>
+                        <img src="https://track.mailerlite.com/webforms/o/3523522/l4m8c9?v1612862753" width="1" height="1" style="max-width:1px;max-height:1px;visibility:hidden;padding:0;margin:0;display:block" alt="." border="0">
+
+                    </form>
+                </div>
+                <div class="ml-form-successBody nl-row-success" style="display:none">
+                    <div class="ml-form-successContent">
+                        <h4>Merci !</h4>
+                        <p>Vous avez bien été inscrit à notre newsletter !</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                <div class="searchbar js-animation" id="searchbar">
     <div class="position-relative h-100 w-100">
         <div class="container-fluid h-100">
             <div class="row align-items-center justify-content-center h-100">
@@ -291,17 +648,9 @@
                         <form name="training_search" method="get" action="/formation/recherche/all">
                             <div class="d-flex flex-column flex-lg-row justify-content-center align-items-stretch align-items-lg-center">
                                 <div class="flex-grow-1">
-                                  <div class="form-floating form-group"><input type="text" id="training_search_title" name="training_search[title]" placeholder=" " class="form-control" /><label for="training_search_title">Que voulez-vous apprendre aujourd&#039;hui ?</label></div> ◀
-                                    <span class="d-none"> 
-                                      <div class="-spaced form-group">
-                                        <div class="form-check">        
-                                          <input type="checkbox" id="training_search_eligibleCpf" name="training_search[eligibleCpf]" class="form-check-input" value="1" />
-                                          <label class="form-check-label" for="training_search_eligibleCpf">
-                                            seulement les formations éligibles au CPF
-                                          </label>
-                                        </div>
-                                      </div>
-                                    </span>
+                                    <div class="form-floating form-group"><input type="text" id="training_search_title" name="training_search[title]" placeholder=" " class="form-control"><label for="training_search_title">Que voulez-vous apprendre aujourd'hui ?</label></div>
+                                    <span class="d-none"> <div class="-spaced form-group"><div class="form-check">        <input type="checkbox" id="training_search_eligibleCpf" name="training_search[eligibleCpf]" class="form-check-input" value="1">
+        <label class="form-check-label" for="training_search_eligibleCpf">seulement les formations éligibles au CPF</label></div></div></span>
                                 </div>
 
                                 <div class="text-center ms-lg-3 mt-4 mt-lg-0 flex-grow-2">
@@ -314,9 +663,9 @@
                                         </button>
                                     </div>
                                 </div>
+
                             </div>
-                        <input type="hidden" id="training_search__token" name="training_search[_token]" value="o3CltIdhr5HWpQqCDqnN3zyze2V4LHoWQMTgPv1wK_c" />
-                      </form>
+                        <input type="hidden" id="training_search__token" name="training_search[_token]" value="7Tf8JoaYYW3R7mmDGQ_dEP36E9LWYTrbcabfpwRZ7M0"></form>
                     </div>
                 </div>
             </div>
@@ -328,54 +677,90 @@
         </button>
     </div>
 </div>
-
-</div>
-</main>
-
+            </div>
+        </main>
 
 
+        <footer class="footer" id="footer">
+                            <div class="container-fluid">
+                    <div class="overflower"></div>
+<p class="mb-0 me-1 d-none d-lg-block" style="margin-bottom: 30px !important; text-align: right;">
+                                    Cap4 Learning est certifié Qualiopi.<br><a target="_blank" href="https://www.cap4learning.com/uploads/media/default/0001/01/26f8aa398b3eec5377d027b80d38bea070a0a14e.pdf">Cliquez ici pour voir notre certificat</a>.
+                                </p>
+
+                    <div class="row align-items-stretch">
+                        <div class="col-7 col-lg-2 order-1 order-lg-1">
+                            <div class="footer__identity" itemscope="" itemtype="https://schema.org/Organization">
+                                <img src="/public/ressource/img/logo_green.svg" alt="Cap4Learning - Logo" itemprop="logo">
+                                <div class="footer__identity-content">
+                                    <h3 class="visually-hidden" itemprop="name">Cap4Learning</h3>
+                                    <p>
+                                        <a href="tel:0033183814115" itemprop="telephone">+33 1 83 81 41 15</a>
+                                    </p>
+                                    <p itemprop="address" itemscope="" itemtype="https://schema.org/PostalAddress">
+                                        <span itemprop="streetAddress">75 rue de Richelieu</span> <br>
+                                        <span itemprop="postalCode">75002 </span>
+                                        <span itemprop="addressLocality">Paris <br>France</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-8 m-auto col-lg-2 order-3 order-lg-2">
+                                                   </div>
+
+                        <div class="col-lg-6 order-4 order-lg-3">
+                            <div class="d-flex h-100 align-items-center justify-content-center">
+                                <p class="mb-0 me-1 d-none d-lg-block">
+                                    © Cap4 Learning, une filiale de
+                                </p>
+                                <nav class="footer__nav">
+                                            <ul class="navbar-nav">
+            
+                <li class="nav-item first">        <a href="https://www.cap4group.com/" target="_blank" class="nav-link">Cap4 Group</a>        
+    </li>
+
+    
+                <li class="nav-item">        <a href="/conditions-generales-de-vente" class="nav-link">Conditions générales de vente</a>        
+    </li>
+
+    
+                <li class="nav-item">        <a href="/vie-privee" class="nav-link">Vie privée</a>        
+    </li>
+
+    
+                <li class="nav-item last">        <a href="/contact" class="nav-link">Contact</a>        
+    </li>
 
 
+    </ul>
 
+                                </nav>
+                            </div>
+                        </div>
 
+                        <div class="col-5 col-lg-2 order-2 order-lg-4">
+                            <div class="footer__socials d-flex flex-column h-100 justify-content-between align-items-end">
+                                <ul class="list-icon">
+                                    <li>
+                                        <a href="https://www.linkedin.com/company/cap4-learning/" target="_blank" title="Suivre Cap4Learning sur Linkedin">
+                                            <svg class="icon icon-linkedin"><use xlink:href="#icon-linkedin"></use></svg>
+                                        </a>
+                                    </li>
+                                </ul>
 
+                                <p class="intrepide-tag">
+                                    Un site <a href="https://www.intrepide.lu" target="_blank">Intrépide Studio</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    </footer>
 
+    
 
-
-
-
-
-
-
-  </body>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  </html>
+<!--googleoff: index--><div class="axeptio_mount" id="axeptio_overlay" data-project-id="602296a28cbb5e1a934f8990" data-nosnippet="" role="dialog" aria-modal="false" aria-labelledby="main-dialog-aria-label" aria-describedby="main-dialog-aria-description"><div class="WebsiteOverlay__WebsiteOverlayStyle-sc-1tlh7za-0 bqzerq ax-website-overlay"><button id="axeptio_main_button" title="Manage your preferences about cookies" class="AxeptioButton__AxeptioButtonStyle-sc-1h6hacv-0 hMxmxV"><span class="AxeptioIcon__AxeptioIconStyle-sc-acb40e-0 cwHlYw"><span class="Icon__IconStyleContainer-sc-1jpid70-0 bEBISY"><span class="Icon__IconStyle-sc-1jpid70-1 bfWHZL svgr"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21.662 2.821C18.866.025 11.663-.252 5.124 5.422-.987 10.725-.89 17.107 3.87 20.613c4.443 3.272 10.542 3.802 15.191-1.256 5.648-6.144 5.399-13.74 2.601-16.536z"></path><path fill="#FFF" d="M8.104 14.644a.567.567 0 01-.804 0h-.001l-2.53-2.529a.57.57 0 01.805-.807l2.128 2.127 6.186-6.185a.57.57 0 01.805.805l-6.589 6.589zm4.895-1.92a.546.546 0 01-.387-.93l4.047-4.047a.549.549 0 01.774 0 .549.549 0 010 .774l-4.046 4.047a.545.545 0 01-.388.156zm4.964 1.236l-1.593 1.591a.544.544 0 01-.773 0 .549.549 0 010-.774l1.594-1.594a.547.547 0 11.79.755l-.016.017-.002.005zm0-2.985l-3.085 3.084a.549.549 0 01-.774-.775l3.087-3.087a.549.549 0 01.774.775l-.002.003z"></path></svg></span></span></span></button></div></div><!--googleon: index--></body></html>
 </template>
 
 <script setup lang="ts">
