@@ -988,7 +988,7 @@
                                     </li>
 
 
-                                    <li class="nav-item last"> <a href="/contact" class="nav-link">Contact</a>
+                                    <li class="nav-item last"> <a href="#" class="nav-link">Contact</a>
                                     </li>
 
 
