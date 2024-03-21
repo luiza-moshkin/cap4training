@@ -1,4 +1,4 @@
-<!--<template>
+<template>
   <v-app-bar color="primary" dense dark flat>
     <v-app-bar-title>
       <nuxt-link
@@ -8,11 +8,4 @@
       </nuxt-link>
     </v-app-bar-title>
   </v-app-bar>
-</template>-->
-
-
-<template>
-
-
-
 </template>
