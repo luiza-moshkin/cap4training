@@ -548,7 +548,7 @@
                                     handicap et ses besoins spécifiques. Nous mettrons tout en oeuvre pour que la
                                     formation se déroule dans les meilleures conditions. Pour tout renseignement
                                     concernant l'accueil des personnes en situation de handicap, <a
-                                        href="/contact">contactez-nous</a>
+                                        href="#">contactez-nous</a>
                                 </p>
                             </div>
 
