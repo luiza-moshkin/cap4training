@@ -5,20 +5,30 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     'nuxt-icon'
   ],
-  css: ["vuetify/lib/styles/main.sass"],
+  css: ["@/assets/scss/main.scss"],
   build: {
     transpile: ["vuetify"],
   },
   app: {
     buildAssetsDir: '/public/',
     head: {
-      htmlAttrs: { dir: 'rtl', lang: 'fa' },
-      link: [{ rel: 'icon', type: 'image/png', href: "/public/ressource/favicon/favicon-32x32.png" }]
+      link: [{ rel: 'icon', type: 'image/png', href: "/public/ressource/favicon/favicon-32x32.png" }],
+      script: [
+        {
+          src: '/public/build/runtime.js',
+        },
+        {
+          src: '/public/build/vendors-node_modules_bootstrap_dist_js_bootstrap_esm_js-node_modules_jquery_dist_jquery_js-no-5e286e.js',
+        },
+        {
+          src: '/public/build/app.js',
+        }
+      ]
     },
   },
   postcss: {
     plugins: {
       autoprefixer: {},
     },
-  },
+  }
 });
