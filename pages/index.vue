@@ -256,10 +256,10 @@ const locale = process.client ? navigator.language : '';
 useHead({
     script: [
         { src: "https://identity.netlify.com/v1/netlify-identity-widget.js" },
-        { src: "/cookieInformation.js", type: "text/javascript" }
+        { src: "/cookieInformation.js", type: "text/javascript" },
+        
     ],
 });
-
 
 
 

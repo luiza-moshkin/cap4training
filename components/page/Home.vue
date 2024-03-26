@@ -246,8 +246,13 @@
 
                     <div class="home__offers-listing js-animation animate__slow -active animate__animated animate__fadeInRight"
                         id="home-offer-listing">
+
+                        <!-- Innovation -->
                         <div class="js-offer-expandable offer">
+
+                            <!-- this div is use in the typescript code -->
                             <div class="offer__wrapper">
+
                                 <h3 class="offer__title">
                                     Innovation
                                 </h3>
@@ -273,6 +278,7 @@
 
                         </div>
 
+                        <!-- Développez vos compétences -->
                         <div class="js-offer-expandable offer -big">
                             <div class="offer__wrapper">
                                 <h3 class="offer__title">
@@ -303,6 +309,7 @@
                             </div>
                         </div>
 
+                        <!-- métier porteur -->
                         <div class="js-offer-expandable offer -big">
                             <div class="offer__wrapper">
                                 <h3 class="offer__title">
@@ -332,6 +339,7 @@
                             </div>
                         </div>
 
+                        <!-- Formation continue -->
                         <div class="js-offer-expandable offer">
                             <div class="offer__wrapper">
                                 <h3 class="offer__title">
@@ -358,6 +366,7 @@
                             </div>
                         </div>
 
+                        <!-- Profitez de l'expérience de nos formateurs -->
                         <div class="js-offer-expandable offer -big">
                             <div class="offer__wrapper">
                                 <h3 class="offer__title">
@@ -387,6 +396,7 @@
                             </div>
                         </div>
 
+                        <!-- Une ingénierie pédagogique éprouvée -->
                         <div class="js-offer-expandable offer -big">
                             <div class="offer__wrapper">
                                 <h3 class="offer__title">
@@ -416,6 +426,7 @@
                             </div>
                         </div>
 
+                        <!-- Notre contrôle qualité -->
                         <div class="js-offer-expandable offer">
                             <div class="offer__wrapper">
                                 <h3 class="offer__title">
@@ -441,6 +452,7 @@
                             </div>
                         </div>
 
+                        <!-- Ecouter et conseiller -->
                         <div class="js-offer-expandable offer">
                             <div class="offer__wrapper">
                                 <h3 class="offer__title">
@@ -466,6 +478,9 @@
                                 </a>
                             </div>
                         </div>
+
+
+
 
                         <img src="/public/ressource/img/home/cap4_offer.svg" alt="Cap4Learning : Offers"
                             class="logo-offer">
@@ -622,3 +637,50 @@
         </div>
     </div>
 </template>
+
+
+
+<script lang="ts">
+export default {
+    mounted() {
+        const listOffer = document.querySelectorAll('.js-offer-expandable');
+        listOffer.forEach(element => {
+            element.addEventListener('click', (event) => {
+                console.log((event.target as HTMLInputElement).value);
+                if ((event.target as HTMLInputElement).matches('svg') || (event.target as HTMLInputElement).matches('use')) {
+                    element.classList.remove('-center');
+                    element.classList.remove('-expand');
+                    listOffer.forEach(elmnt => {
+                        elmnt.classList.remove('-resized');
+                    });
+
+                    element.parentElement?.classList.remove('-open')
+
+
+
+                } else {
+
+                    if (!element.classList.contains('-center')) {
+                        listOffer.forEach(elmnt => {
+                            elmnt.classList.add('-resized');
+                            elmnt.classList.remove('-center');
+                            elmnt.classList.remove('-expand');
+                        });
+
+                        element.classList.remove('-resized');
+                        element.classList.add('-center');
+                        element.parentElement?.classList.add('-open');
+                        setTimeout(function () {
+                            element.classList.add('-expand');
+                        }, 400);
+
+                    }
+                }
+
+            });
+        });
+    }
+
+}
+
+</script>

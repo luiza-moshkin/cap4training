@@ -14,7 +14,7 @@ const general = {
         xxl: 1580,
     },
 
-    "animationHandler": function() {
+    "animationHandler": function () {
         const windowHeight = window.innerHeight;
         let yPxTrigger, yPercentTrigger;
 
@@ -119,7 +119,7 @@ const general = {
         ];
 
         $.each(triggerAnimation, function (key, animation) {
-            if ($('#' + animation.id).length){
+            if ($('#' + animation.id).length) {
                 if (animation.revert === false) {
                     // Triggering with offset
                     yPxTrigger = $('#' + animation.id).offset().top - animation.offsetTop;
@@ -145,58 +145,58 @@ const general = {
 
     },
 
-    "buttonHoverHandler": function() {
+    "buttonHoverHandler": function () {
         let buttons = $('.btn');
 
-        buttons.mouseenter(function(e) {
+        buttons.mouseenter(function (e) {
             const parentOffset = $(this).offset();
             const relX = e.pageX - parentOffset.left;
             const relY = e.pageY - parentOffset.top;
-            $(this).prev(".btn-fx-circle").css({"left": relX, "top": relY });
+            $(this).prev(".btn-fx-circle").css({ "left": relX, "top": relY });
             $(this).prev(".btn-fx-circle").removeClass("desplode-circle");
             $(this).prev(".btn-fx-circle").addClass("explode-circle");
 
         });
 
-        buttons.mouseleave(function(e) {
+        buttons.mouseleave(function (e) {
             const parentOffset = $(this).offset();
             const relX = e.pageX - parentOffset.left;
             const relY = e.pageY - parentOffset.top;
-            $(this).prev(".btn-fx-circle").css({"left": relX, "top": relY });
+            $(this).prev(".btn-fx-circle").css({ "left": relX, "top": relY });
             $(this).prev(".btn-fx-circle").removeClass("explode-circle");
             $(this).prev(".btn-fx-circle").addClass("desplode-circle");
         });
 
         let stretchedLink = $('.js-btn-fx-a');
 
-        stretchedLink.mouseenter(function(e) {
+        stretchedLink.mouseenter(function (e) {
             const parentOffset = $(this).offset();
             const relX = e.pageX - parentOffset.left;
             const relY = e.pageY - parentOffset.top;
-            $(this).prev(".btn-fx-circle").css({"left": relX, "top": relY });
+            $(this).prev(".btn-fx-circle").css({ "left": relX, "top": relY });
             $(this).prev(".btn-fx-circle").removeClass("desplode-circle");
             $(this).prev(".btn-fx-circle").addClass("explode-circle");
 
         });
 
-        stretchedLink.mouseleave(function(e) {
+        stretchedLink.mouseleave(function (e) {
             const parentOffset = $(this).offset();
             const relX = e.pageX - parentOffset.left;
             const relY = e.pageY - parentOffset.top;
-            $(this).prev(".btn-fx-circle").css({"left": relX, "top": relY });
+            $(this).prev(".btn-fx-circle").css({ "left": relX, "top": relY });
             $(this).prev(".btn-fx-circle").removeClass("explode-circle");
             $(this).prev(".btn-fx-circle").addClass("desplode-circle");
         });
     },
 
-    "offersHandler": function() {
+    "offersHandler": function () {
         let offers = $('.js-offer-expandable');
         let button = null;
 
         if (offers.length) {
-            offers.each(function(k, v) {
+            offers.each(function (k, v) {
                 let $this = $(this);
-                $this.on('click', function(e) {
+                $this.on('click', function (e) {
                     if (e.target.matches('svg') || e.target.matches('use')) {
                         $this.removeClass('-center');
                         $this.removeClass('-expand');
@@ -210,7 +210,7 @@ const general = {
                             $this.removeClass('-resized');
                             $this.addClass('-center');
                             $this.parent().addClass('-open');
-                            setTimeout(function() {
+                            setTimeout(function () {
                                 $this.addClass('-expand');
                             }, 400);
                         }
@@ -220,8 +220,8 @@ const general = {
         }
     },
 
-    "menuHandler": function() {
-        $('.navbar-toggler').on('click', function() {
+    "menuHandler": function () {
+        $('.navbar-toggler').on('click', function () {
             $('body').toggleClass('menu-open');
         });
 
@@ -239,7 +239,7 @@ const general = {
         //     });
         // }
 
-        if (document.getElementById('js-body').classList.contains('-transparent')){
+        if (document.getElementById('js-body').classList.contains('-transparent')) {
             let waypointText = new Waypoint({
                 element: document.getElementById('js-main'),
                 handler: function handler(direction) {
@@ -266,7 +266,7 @@ const general = {
         });
     },
 
-    "trainingHandler": function() {
+    "trainingHandler": function () {
         if (window.innerWidth >= general.mqBreakpoints.sxl) {
             let form = document.getElementById('contact');
             let menu = document.getElementById('js-training-menu');
@@ -275,9 +275,9 @@ const general = {
             let hasScroll = false;
 
             if (form && menu) {
-                window.onscroll = function(){
+                window.onscroll = function () {
                     let height = form.offsetTop
-                    if((window.scrollY + menu.offsetHeight + 80)  >= height) { // change target to number
+                    if ((window.scrollY + menu.offsetHeight + 80) >= height) { // change target to number
 
                         if (!hasScroll) {
                             hasScrollAnim = false;
@@ -301,9 +301,9 @@ const general = {
             } else if (menu) {
                 let footer = document.getElementById('footer');
 
-                window.onscroll = function(){
+                window.onscroll = function () {
                     let height = footer.offsetTop
-                    if((window.scrollY + menu.offsetHeight + 230)  >= height) { // change target to number
+                    if ((window.scrollY + menu.offsetHeight + 230) >= height) { // change target to number
 
                         if (!hasScroll) {
                             hasScrollAnim = false;
@@ -328,7 +328,7 @@ const general = {
         }
     },
 
-    "searchBarHandler": function() {
+    "searchBarHandler": function () {
         const buttonsOpen = document.querySelectorAll('.js-searchbar-opening');
         const buttonClose = document.querySelector('.js-searchbar-closing');
 
@@ -346,15 +346,15 @@ const general = {
         });
     },
 
-    "contactHandler": function() {
-        $('.js-select-change').on('click', function() {
-            let select = $('#'+$(this).data('select-id'));
-            select.find('option[value='+$(this).data('select-option')+']').attr('selected','selected');
+    "contactHandler": function () {
+        $('.js-select-change').on('click', function () {
+            let select = $('#' + $(this).data('select-id'));
+            select.find('option[value=' + $(this).data('select-option') + ']').attr('selected', 'selected');
         })
     },
 
-    "sessionSlotHandler": function() {
-        $('.js-training-slot-btn').on('click', function() {
+    "sessionSlotHandler": function () {
+        $('.js-training-slot-btn').on('click', function () {
             $(this).toggleClass('active');
             $('.js-training-slot-wrapper').toggleClass('active');
         })
@@ -362,7 +362,7 @@ const general = {
 };
 export default general;
 
-(function($){
+(function ($) {
     $(document).ready(function () {
         general.buttonHoverHandler();
         general.animationHandler();
