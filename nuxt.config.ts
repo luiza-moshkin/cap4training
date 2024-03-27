@@ -6,6 +6,9 @@ export default defineNuxtConfig({
     'nuxt-icon'
   ],
   css: ["@/assets/scss/main.scss"],
+  build: {
+    transpile: ["vuetify"],
+  },
   app: {
     buildAssetsDir: '/public/',
     head: {
@@ -13,14 +16,6 @@ export default defineNuxtConfig({
 
     },
   },
-  router: {
-    options: {
-      strict: true,
-    },
-  },
-
-
-
   postcss: {
     plugins: {
       autoprefixer: {},

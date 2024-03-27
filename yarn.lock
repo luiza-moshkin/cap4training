@@ -7018,6 +7018,11 @@ vue@^3.3.8:
     "@vue/server-renderer" "3.4.21"
     "@vue/shared" "3.4.21"
 
+vuetify@^3.4.4:
+  version "3.5.12"
+  resolved "https://registry.yarnpkg.com/vuetify/-/vuetify-3.5.12.tgz#bd354b67458317b0f3a0014aa9839ca4762d7923"
+  integrity sha512-6Dv6hSQH4NpoIFSEn+GouexKZYMCgMhB1x/Bepp7vnDgnpy6xGj2OgNOp/eBTPiaNrsX9knMv310c2Y9FSEllw==
+
 web-namespaces@^2.0.0:
   version "2.0.1"
   resolved "https://registry.npmjs.org/web-namespaces/-/web-namespaces-2.0.1.tgz"

@@ -1,8 +1,5 @@
 <template>
     <div class="container-fluid -corner">
-
-
-
         <div class="row justify-content-center">
             <div class="col-10">
                 <section class="home__intro" id="home-intro">
