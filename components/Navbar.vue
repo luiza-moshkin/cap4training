@@ -90,19 +90,21 @@
 
 <script setup lang="ts">
 
-// const categorys = await queryContent("/category/fr/").find(); // fetch category
-const categorys = [
-    {
-        title: 'titleee',
-        description: 'mydescr',
-        _path: 'patt'
-    },
-
-    {
-        title: 'titleee',
-        description: 'mydescr',
-        _path: 'patt'
-    },
+const categorys = await queryContent("/category/fr/").find(); // fetch category
+if(!categorys== null) {
+    const categorys = [
+        {
+            title: 'titleee',
+            description: 'mydescr',
+            _path: 'patt'
+        },
+        {
+            title: 'titleee',
+            description: 'mydescr',
+            _path: 'patt'
+        },
     
-];
+    ];
+}
+
 </script>
