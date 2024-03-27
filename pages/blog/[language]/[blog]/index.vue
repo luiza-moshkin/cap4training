@@ -6,10 +6,7 @@ const lang = params.language;
 const post = await queryContent(`/blog/${lang}/${blog}`).findOne();
 </script>
 <template>
-  <v-container>
-    <ContentRenderer :value="post">
-      <b>Titre blog : </b>{{ post.title }}<br/>
-    </ContentRenderer>
-  </v-container>
+  <ContentRenderer :value="post">
+    <b>Titre blog : </b>{{ post.title }}<br />
+  </ContentRenderer>
 </template>
-

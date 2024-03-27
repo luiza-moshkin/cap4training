@@ -1,3 +1,4 @@
+import { NuxtLink } from '#build/components';
 <template>
     <div class="container-fluid">
         <div class="overflower"></div>
@@ -41,15 +42,26 @@
                             </li>
 
 
-                            <li class="nav-item"> <a href="#" class="nav-link">Conditions générales de vente</a>
+                            <li class="nav-item">
+                                <NuxtLink class="nav-link" :to="'/general-condition-of-sale'">General condition of sale
+
+                                </NuxtLink>
                             </li>
 
 
-                            <li class="nav-item"> <a href="#" class="nav-link">Vie privée</a>
+                            <li class="nav-item">
+                                <NuxtLink class="nav-link" :to="'/private-life'">Private life
+
+                                </NuxtLink>
+
+
                             </li>
 
 
-                            <li class="nav-item last"> <a href="#" class="nav-link">Contact</a>
+                            <li class="nav-item last">
+                                <NuxtLink class="nav-link" :to="'/contact'">Contact
+
+                                </NuxtLink>
                             </li>
 
 

@@ -1,9 +1,9 @@
 <template>
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid align-items-lg-center">
-            <a class="navbar-brand base-link" href="/">
+            <NuxtLink class="navbar-brand base-link" :to="'/'">
                 <img src="/public/ressource/img/logo_green.svg" alt="Cap4Learning - Logo" itemprop="logo">
-            </a>
+            </NuxtLink>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <svg class="icon icon-menu-open">
@@ -17,40 +17,38 @@
                 <div class="navbar-left">
                     <ul class="navbar-nav">
 
-                        <li class="nav-item active first"> <a href="/" class="nav-link">Accueil</a>
+
+                        <li class="nav-item first" :class="{ 'active': $route.path == '/' }">
+                            <NuxtLink class="nav-link" :to="'/'">
+                                Welcome
+                            </NuxtLink>
                         </li>
 
 
-                        <li class="nav-item dropdown"> <a href="#" class="nav-link dropdown-toggle base-link"
-                                data-toggle="dropdown" role="button" aria-expanded="false" data-bs-toggle="dropdown"
-                                id="courses_list">Formations</a>
+                        <li class="nav-item dropdown" :class="{ 'active': $route.path == '/training' }">
+                            <a href="#" class="nav-link dropdown-toggle base-link" data-toggle="dropdown" role="button"
+                                aria-expanded="false" data-bs-toggle="dropdown" id="courses_list">Trainings</a>
                             <ul class="dropdown-menu menu_level_1" aria-labelled-by="courses_list">
 
-                                <li class="first"> <a href="#">Toutes</a>
+                                <li class="first">
+                                    <NuxtLink :to="'/training'">
+                                        All
+                                    </NuxtLink>
                                 </li>
 
-
-                                <li> <a href="#">API</a>
-                                </li>
-
-
-                                <li> <a href="#">Cybersécurité</a>
-                                </li>
-
-
-                                <li> <a href="#">MuleSoft</a>
-                                </li>
+                                <div v-for="cat of categorys">
+                                    <li>
+                                        <NuxtLink :to="cat._path">
+                                            {{ cat.title }}
+                                        </NuxtLink>
+                                    </li>
+                                </div>
 
 
-                                <li> <a href="#">Outils BI</a>
-                                </li>
-
-
-                                <li> <a href="#">RGPD</a>
-                                </li>
-
-
-                                <li class="last"> <a href="#">Sur-mesure</a>
+                                <li class="last" :class="{ 'active': $route.path == '/custom-made' }">
+                                    <NuxtLink :to="'/custom-made'">
+                                        Custom made
+                                    </NuxtLink>
                                 </li>
 
 
@@ -59,13 +57,18 @@
                         </li>
 
 
-                        <li class="nav-item"> <a href="#" class="nav-link">Actualités</a>
+                        <li class="nav-item" :class="{ 'active': $route.path == '/news' }">
+                            <NuxtLink class="nav-link" :to="'/news'">
+                                News
+                            </NuxtLink>
                         </li>
 
 
-                        <li class="nav-item last"> <a href="#" class="nav-link">Contact</a>
+                        <li class="nav-item last" :class="{ 'active': $route.path == '/contact' }">
+                            <NuxtLink class="nav-link" :to="'/contact'">
+                                Contact
+                            </NuxtLink>
                         </li>
-
 
                     </ul>
 
@@ -77,7 +80,7 @@
                         <svg class="icon icon-search ">
                             <use xlink:href="#icon-search"></use>
                         </svg>
-                        <span class="visually-hidden">Recherche</span>
+                        <span class="visually-hidden">Search</span>
                     </button>
                 </div>
             </div>
@@ -88,4 +91,5 @@
 <script setup lang="ts">
 
 const categorys = await queryContent("/category/fr/").sort({ date: -1 }).find(); // fetch category
+
 </script>

@@ -10,7 +10,7 @@ const categoryObject = await queryContent(`/category/${lang}/${training.category
 <template>
   <v-container>
     <ContentRenderer :value="training">
-      <b>Titre formation : </b>{{ training.title }} {{ categoryObject.title }}<br/>
+      <b>Training title : </b>{{ training.title }} {{ categoryObject.title }}<br />
     </ContentRenderer>
   </v-container>
 </template>
