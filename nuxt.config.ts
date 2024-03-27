@@ -13,6 +13,8 @@ export default defineNuxtConfig({
 
     },
   },
+  ssr: false,
+
   postcss: {
     plugins: {
       autoprefixer: {},
