@@ -6,6 +6,9 @@ export default defineNuxtConfig({
     'nuxt-icon'
   ],
   css: ["@/assets/scss/main.scss"],
+  build: {
+    transpile: ["vuetify"],
+  },
   app: {
     buildAssetsDir: '/public/',
     head: {
