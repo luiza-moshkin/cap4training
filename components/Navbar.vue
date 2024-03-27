@@ -90,6 +90,19 @@
 
 <script setup lang="ts">
 
-const categorys = await queryContent("/category/fr/").sort({ date: -1 }).find(); // fetch category
+// const categorys = await queryContent("/category/fr/").find(); // fetch category
+const categorys = [
+    {
+        title: 'titleee',
+        description: 'mydescr',
+        _path: 'patt'
+    },
 
+    {
+        title: 'titleee',
+        description: 'mydescr',
+        _path: 'patt'
+    },
+    
+];
 </script>
