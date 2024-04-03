@@ -20,7 +20,7 @@
 
                         <li class="nav-item first" :class="{ 'active': $route.path == '/' }">
                             <NuxtLink class="nav-link" :to="'/'">
-                                Welcome
+                                {{ $t('welcome') }}
                             </NuxtLink>
                         </li>
 
@@ -32,7 +32,7 @@
 
                                 <li class="first">
                                     <NuxtLink :to="'/training'">
-                                        All
+                                        {{ $t('all') }}
                                     </NuxtLink>
                                 </li>
 
@@ -47,7 +47,7 @@
 
                                 <li class="last" :class="{ 'active': $route.path == '/custom-made' }">
                                     <NuxtLink :to="'/custom-made'">
-                                        Custom made
+                                        {{ $t('customMade') }}
                                     </NuxtLink>
                                 </li>
 
@@ -57,16 +57,16 @@
                         </li>
 
 
-                        <li class="nav-item" :class="{ 'active': $route.path == '/news' }">
-                            <NuxtLink class="nav-link" :to="'/news'">
-                                News
+                        <li class="nav-item" :class="{ 'active': $route.path == '/blog' }">
+                            <NuxtLink class="nav-link" :to="'/blog'">
+                                {{ $t('news') }}
                             </NuxtLink>
                         </li>
 
 
                         <li class="nav-item last" :class="{ 'active': $route.path == '/contact' }">
                             <NuxtLink class="nav-link" :to="'/contact'">
-                                Contact
+                                {{ $t('contact') }}
                             </NuxtLink>
                         </li>
 
@@ -75,7 +75,13 @@
                 </div>
                 <div class="navbar-right">
 
-
+                    <div>
+                        <div>
+                            <button @click="setLocale('en')">en</button>
+                            <button @click="setLocale('fr')">fr</button>
+                            <p>{{ $t('hello') }}</p>
+                        </div>
+                    </div>
                     <button class="navbar-search js-searchbar-opening btn btn-link pe-0">
                         <svg class="icon icon-search ">
                             <use xlink:href="#icon-search"></use>
@@ -90,10 +96,15 @@
 
 <script setup lang="ts">
 
+const { locale, setLocale } = useI18n(); // for the translation
+
 const categorys = await queryContent("/category/fr/").find(); // fetch category
 
 
-
-
+useHead({
+    script: [
+        { src: "/navBarBurgerMenu.js", type: "text/javascript" },
+    ],
+});
 
 </script>

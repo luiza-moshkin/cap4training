@@ -134,6 +134,8 @@ collections:
       - { label: 'Language', name: 'language', widget: 'select', options: ['en', 'fr'], required: true }
 
 
+
+
 i18n:
   structure: multiple_folders
   locales: [en, fr]

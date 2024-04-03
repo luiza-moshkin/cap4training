@@ -1,0 +1,43 @@
+$('.navbar-toggler').on('click', function () {
+    $('body').toggleClass('menu-open');
+});
+
+// if ( !document.getElementById('js-body').classList.contains('js-menu-fixed')){
+//     let waypointText = new Waypoint({
+//         element: document.getElementById('js-main'),
+//         handler: function handler(direction) {
+//             if (direction === 'down') {
+//                 document.getElementById('js-body').classList.add('js-menu-fixed');
+//             } else {
+//                 document.getElementById('js-body').classList.remove('js-menu-fixed');
+//             }
+//         },
+//         // offset: '-10'
+//     });
+// }
+
+if (document.getElementById('js-body').classList.contains('-transparent')) {
+    let waypointText = new Waypoint({
+        element: document.getElementById('js-main'),
+        handler: function handler(direction) {
+            if (direction === 'down') {
+                document.getElementById('js-body').classList.remove('-transparent');
+            } else {
+                document.getElementById('js-body').classList.add('-transparent');
+            }
+        },
+        offset: '-10'
+    });
+}
+
+let waypointTMobile = new Waypoint({
+    element: document.getElementById('js-main'),
+    handler: function handler(direction) {
+        if (direction === 'down') {
+            document.getElementById('js-body').classList.add('js-menu-mobile-fixed');
+        } else {
+            document.getElementById('js-body').classList.remove('js-menu-mobile-fixed');
+        }
+    },
+    offset: '-5%'
+});

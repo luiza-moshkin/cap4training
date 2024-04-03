@@ -1,7 +1,6 @@
 import { NuxtLink } from '#build/components';
 <template>
     <div class="container-fluid">
-        <div class="overflower"></div>
         <p class="mb-0 me-1 d-none d-lg-block" style="margin-bottom: 30px !important; text-align: right;">
             Cap4 Learning est certifié Qualiopi.<br><a target="_blank"
                 href="https://www.cap4learning.com/uploads/media/default/0001/01/26f8aa398b3eec5377d027b80d38bea070a0a14e.pdf">Cliquez
@@ -10,14 +9,14 @@ import { NuxtLink } from '#build/components';
 
         <div class="row align-items-stretch">
             <div class="col-7 col-lg-2 order-1 order-lg-1">
-                <div class="footer__identity" itemscope="" itemtype="https://schema.org/Organization">
+                <div class="footer__identity" itemtype="https://schema.org/Organization">
                     <img src="/public/ressource/img/logo_green.svg" alt="Cap4Learning - Logo" itemprop="logo">
                     <div class="footer__identity-content">
                         <h3 class="visually-hidden" itemprop="name">Cap4Learning</h3>
                         <p>
                             <a href="tel:0033183814115" itemprop="telephone">+33 1 83 81 41 15</a>
                         </p>
-                        <p itemprop="address" itemscope="" itemtype="https://schema.org/PostalAddress">
+                        <p itemprop="address" itemtype="https://schema.org/PostalAddress">
                             <span itemprop="streetAddress">75 rue de Richelieu</span> <br>
                             <span itemprop="postalCode">75002 </span>
                             <span itemprop="addressLocality">Paris <br>France</span>

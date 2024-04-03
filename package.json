@@ -9,11 +9,12 @@
   },
   "devDependencies": {
     "@nuxt/content": "^2.9.0",
+    "@nuxtjs/i18n": "npm:@nuxtjs/i18n-edge",
     "@vueuse/core": "^10.6.1",
     "@vueuse/nuxt": "^10.6.1",
     "animate.css": "^4.1.1",
-    "bootstrap": "^5.0.0-beta1",
     "autoprefixer": "^10.4.18",
+    "bootstrap": "^5.0.0-beta1",
     "nuxt": "3.8.2",
     "nuxt-icon": "^0.6.8",
     "postcss": "^8.4.35"

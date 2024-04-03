@@ -3,9 +3,11 @@
         <div class="row justify-content-center">
             <div class="col-10">
                 <section class="home__intro" id="home-intro">
-                    <h1 class="home__intro-title">Nous sommes experts en formation</h1>
-                    <p class="home__intro-desc">Nous aidons nos clients à développer leur carrière et leurs
-                        compétences.</p>
+                    <h1 class="home__intro-title">
+                        {{ $t('weAreExpert') }}</h1>
+                    <p class="home__intro-desc">
+                        {{ $t('aimExcellence') }}
+                    </p>
                     <div class="home__intro-list">
                         <img class="home__intro-img" src="/public/ressource/img/home/cap4_intro_blue.jpg"
                             alt="Cap4Learning - introduction blue picture">
@@ -34,8 +36,12 @@
             <div class="col-12 px-0">
                 <section class="home__training" id="home-training">
                     <div class="home__training-listing">
+
+                        <!-- 
                         <div class="home__training-search js-animation -active animate__animated animate__fadeInUp"
                             id="home-search-bar">
+
+                                SEARCH BAR for formation
                             <form name="training_search" method="get" action="/formation/recherche/all">
                                 <svg class="icon icon-search ">
                                     <use xlink:href="#icon-search"></use>
@@ -64,10 +70,56 @@
                                 <input type="hidden" id="training_search__token" name="training_search[_token]"
                                     value="Hoi4PkxIZ2tryIwn6QSjuK46xcu9Bw6x64C47yMSMFI">
                             </form>
+
+
+
                         </div>
+ -->
 
                         <div class="js-animation -active animate__animated animate__fadeInUp" id="home-training-list">
-
+                            <div class="home__training-dropdown dropdown">
+                                <button class="btn btn-underline dropdown-toggle" type="button" id="dropdownMenuButton"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Nos formations par catégorie
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            Toutes
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            API
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            Cybersécurité
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            MuleSoft
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            Outils BI
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            RGPD
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            Sur-mesure
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                             <h2 class="h3">
                                 Nos formations à la une:
                             </h2>
@@ -175,24 +227,7 @@
                                 </article>
                             </div>
 
-                            <div class="home__training-dropdown dropdown">
-                                <button class="btn btn-underline dropdown-toggle" type="button" id="dropdownMenuButton"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    Nos formations par catégorie
-                                </button>
-                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <li><a class="dropdown-item" href="#">Toutes</a></li>
-                                    <li><a class="dropdown-item" href="#">API</a></li>
-                                    <li><a class="dropdown-item" href="#">Cybersécurité</a>
-                                    </li>
-                                    <li><a class="dropdown-item" href="#">MuleSoft</a></li>
-                                    <li><a class="dropdown-item" href="#">Outils
-                                            BI</a></li>
-                                    <li><a class="dropdown-item" href="#">RGPD</a></li>
-                                    <li><a class="dropdown-item" href="#">Sur-mesure</a>
-                                    </li>
-                                </ul>
-                            </div>
+
                         </div>
                     </div>
 
@@ -511,8 +546,8 @@
                         <form class="form -nl nl-row-form" action="https://static.mailerlite.com/webforms/submit/l4m8c9"
                             data-code="l4m8c9" method="post" target="_blank">
                             <div class="form-floating form-group ml-field-email ml-validate-email">
-                                <input type="email" id="fields[email]" name="fields[email]" required="required"
-                                    placeholder=" " class="form-control" aria-invalid="false">
+                                <input type="email" id="fields[email]" name="fields[email]" required placeholder=" "
+                                    class="form-control" aria-invalid="false">
                                 <label for="fields[email]">votre adresse email</label>
                             </div>
 
@@ -521,7 +556,7 @@
                                     <div
                                         class="form-check justify-content-between justify-content-lg-start mb-3 mb-lg-0 w-75">
                                         <input type="checkbox" class="form-check-input" name="checkbox_nl"
-                                            id="checkbox_nl" checked="" required="required" aria-invalid="false">
+                                            id="checkbox_nl" checked required aria-invalid="false">
                                         <label class="form-check-label" for="checkbox_nl">
                                             __I agree to terms &amp; conditions
                                         </label>
@@ -675,8 +710,16 @@ export default {
 
             });
         });
+
+
+
+
+
     }
-
 }
-
+definePageMeta({
+    pageTransition: {
+        name: 'rotate'
+    }
+})
 </script>
