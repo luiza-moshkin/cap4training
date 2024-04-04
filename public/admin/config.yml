@@ -140,7 +140,7 @@ collections:
     create: true
     i18n: true
 
-    slug: '{{slug}}'
+    slug: 'General condition of sale'
     fields:
     # markdown
       - { label: 'content', name: 'content', widget: 'markdown', required: true, i18n: true  }
