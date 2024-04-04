@@ -1,4 +1,4 @@
 ---
-title: General condition of sale
+title: Private life
 content: fezafeza
 ---
