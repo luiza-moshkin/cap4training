@@ -133,7 +133,6 @@ collections:
     # Language
       - { label: 'Language', name: 'language', widget: 'select', options: ['en', 'fr'], required: true }
 
-section: 
   - name: 'generalConditionOfSale'
     label: 'General condition of sale'
     folder: 'content/general-condition-of-sale'
