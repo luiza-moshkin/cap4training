@@ -64,8 +64,9 @@ const categoryObject = await queryContent(`/category/${lang}/${training.category
         <div class="col-10">
           <div class="training-detail__banner">
             <div class="training-detail__banner-left">
-              <img src="/uploads/media/default/0001/01/2c1f7e5caf7bf61fd5e4d4d7dff7543448352b3f.jpeg" alt="MuleSoft"
-                class="training__main-img">
+              img
+              <!--<img src="/uploads/media/default/0001/01/2c1f7e5caf7bf61fd5e4d4d7dff7543448352b3f.jpeg" alt="MuleSoft"
+                class="training__main-img">-->
             </div>
 
             <div class="training-detail__banner-right">
