@@ -144,16 +144,16 @@ collections:
       - { label: 'title', name: 'title', widget: "hidden", default: "General condition of sale", i18n: duplicate }
       - { label: 'content', name: 'content', widget: 'markdown', required: true, i18n: true  }
 
-    - name: 'privateLife'
-    label: 'Private life'
-    folder: 'content/privateLife'
-    create: false
-    delete: false
-    i18n: true
-    slug: '{{slug}}'
-    fields:
-      - { label: 'title', name: 'title', widget: "hidden", default: "Private life", i18n: duplicate }
-      - { label: 'content', name: 'content', widget: 'markdown', required: true, i18n: true  }
+  - name: 'privateLife'
+  label: 'Private life'
+  folder: 'content/privateLife'
+  create: false
+  delete: false
+  i18n: true
+  slug: '{{slug}}'
+  fields:
+    - { label: 'title', name: 'title', widget: "hidden", default: "Private life", i18n: duplicate }
+    - { label: 'content', name: 'content', widget: 'markdown', required: true, i18n: true  }
 
 
 
