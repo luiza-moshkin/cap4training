@@ -1,3 +1,0 @@
----
-content: General condition english
----
