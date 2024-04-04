@@ -454,7 +454,7 @@ const categoryObject = await queryContent(`/category/${lang}/${training.category
           <div class="row align-items-center justify-content-center h-100">
             <div class="col-10 col-lg-8">
               <div class="searchbar__wrapper">
-                <img src="/static/img/logo_white.svg" alt="CAP4Learning logo" class="searchbar__logo">
+                <img src="/public/ressource/img/logo_white.svg" alt="CAP4Learning logo" class="searchbar__logo">
 
                 <h2 class="h2 searchbar__title">
                   <svg class="icon icon-search ">
