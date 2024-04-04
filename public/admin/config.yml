@@ -136,7 +136,7 @@ collections:
   - name: 'generalConditionOfSale'
     label: 'General condition of sale'
     folder: 'content/generalCondition'
-    create: false
+    create: true
     i18n: true
     slug: '{{slug}}'
     fields:
