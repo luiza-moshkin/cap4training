@@ -1,6 +1,6 @@
 export default defineI18nConfig(() => ({
     legacy: false,
-    locale: 'en',
+    locale: 'fr',
     messages: {
         en: {
             welcome: 'Welcome',
@@ -16,7 +16,7 @@ export default defineI18nConfig(() => ({
         },
         fr: {
             welcome: 'Bienvenue',
-            Hhello: 'Bonjour',
+            hello: 'Bonjour',
             all: 'Tous',
             trainings: 'Trainings',
             customMade: 'Sur-mesure',

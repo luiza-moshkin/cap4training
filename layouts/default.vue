@@ -213,8 +213,9 @@
       </header>
       <main class="main" id="js-main">
 
-        <slot />
-
+        <div class="container-fluid -corner">
+          <slot />
+        </div>
       </main>
 
       <footer class="footer" id="footer">

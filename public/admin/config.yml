@@ -79,7 +79,7 @@ collections:
       - { label: 'Achievement', name: 'achieveemnt', widget: 'markdown', editor_components: [],  buttons: ['bulleted-list', 'numbered-list', 'link'], i18n: true  , required: true}
       # Trainer
       - { label: 'Trainer', name: 'trainer', widget: 'markdown', editor_components: [],  buttons: ['bulleted-list', 'numbered-list', 'link'], i18n: true, required: true}
-      # Metas
+      # Metas, idk what is that
       - { label: 'Metas', name: 'metas', widget: 'markdown', editor_components: [],  buttons: ['bulleted-list', 'numbered-list', 'link'], i18n: true, required: false}
       # CPF eligibility
       - { label: 'Eligible CPF', name: 'eligible_cpf', widget: 'boolean', i18n: duplicate, required: false}
@@ -132,6 +132,16 @@ collections:
       - { label: 'Date', name: 'date_session', widget: 'datetime', required: true}
     # Language
       - { label: 'Language', name: 'language', widget: 'select', options: ['en', 'fr'], required: true }
+
+- name: 'generalConditionOfSale'
+  label: 'General condition of sale'
+  folder: 'content/general-condition-of-sale'
+  format: 'frontmatter'
+  create: true
+  slug: '{{slug}}'
+  fields:
+  # Title
+    - { label: 'Title general condition', name: 'title', widget: 'string', required: false}
 
 
 
