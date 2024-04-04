@@ -135,14 +135,16 @@ collections:
 
   - name: 'generalConditionOfSale'
     label: 'General condition of sale'
-    folder: 'content/general-condition-of-sale'
+    delete: false
+    file: 'content/generalConditionOfSale'
+    description: 'General Condition Settings'
     format: 'frontmatter'
     create: false
     i18n: true
     slug: '{{slug}}'
     fields:
     # markdown
-      - { label: 'title', name: 'title', widget: "hidden", default: "General condition of sale"}
+      - { label: 'title', name: 'title', widget: "hidden", default: "General condition of sale", i18n: duplicate }
       - { label: 'content', name: 'content', widget: 'markdown', required: true, i18n: true  }
 
 
