@@ -133,15 +133,16 @@ collections:
     # Language
       - { label: 'Language', name: 'language', widget: 'select', options: ['en', 'fr'], required: true }
 
+section: 
 - name: 'generalConditionOfSale'
-  label: 'General condition of sale'
-  folder: 'content/general-condition-of-sale'
-  format: 'frontmatter'
-  create: true
-  slug: '{{slug}}'
-  fields:
-  # Title
-    - { label: 'Title general condition', name: 'title', widget: 'string', required: false}
+    label: 'General condition of sale'
+    folder: 'content/general-condition-of-sale'
+    format: 'frontmatter'
+    create: true
+    slug: '{{slug}}'
+    fields:
+    # Title
+      - { label: 'Title general condition', name: 'title', widget: 'string', required: false}
 
 
 
