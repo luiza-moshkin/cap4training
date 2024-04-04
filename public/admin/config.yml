@@ -140,9 +140,10 @@ collections:
     create: true
     i18n: true
 
-    slug: 'general-condition-of-sale'
+    slug: '{{slug}}'
     fields:
     # markdown
+      - { label: 'title', name: 'title', widget: "hidden", default: "General condition of sale"}
       - { label: 'content', name: 'content', widget: 'markdown', required: true, i18n: true  }
 
 

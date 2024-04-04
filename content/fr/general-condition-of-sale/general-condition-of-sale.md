@@ -1,3 +1,0 @@
----
-content: french condition
----
