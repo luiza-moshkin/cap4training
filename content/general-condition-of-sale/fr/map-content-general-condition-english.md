@@ -1,0 +1,3 @@
+---
+content: General condition french
+---
