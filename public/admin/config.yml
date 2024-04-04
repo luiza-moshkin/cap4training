@@ -143,7 +143,7 @@ collections:
     slug: '{{slug}}'
     fields:
     # markdown
-      - { label: 'content', name: 'content', widget: 'markdown', required: true }
+      - { label: 'content', name: 'content', widget: 'markdown', required: true, i18n: true  }
 
 
 
