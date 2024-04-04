@@ -140,8 +140,8 @@ collections:
     create: true
     slug: '{{slug}}'
     fields:
-    # Title
-      - { label: 'Title general condition', name: 'title', widget: 'string', required: false}
+    # markdown
+      - { label: 'content', name: 'content', widget: 'markdown', required: true }
 
 
 
