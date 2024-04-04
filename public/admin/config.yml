@@ -137,9 +137,8 @@ collections:
     label: 'General condition of sale'
     folder: 'content/general-condition-of-sale'
     format: 'frontmatter'
-    create: true
+    create: false
     i18n: true
-
     slug: '{{slug}}'
     fields:
     # markdown
