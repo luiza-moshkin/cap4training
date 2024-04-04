@@ -138,6 +138,8 @@ collections:
     folder: 'content/general-condition-of-sale'
     format: 'frontmatter'
     create: true
+    i18n: true
+
     slug: '{{slug}}'
     fields:
     # markdown
