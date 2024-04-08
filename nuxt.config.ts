@@ -26,7 +26,7 @@ export default defineNuxtConfig({
     langDir: 'locales', // name of the translation directory
 
     defaultLocale: 'en',
-    strategy: "no_prefix", // the defaultLocale en will not have his /en 
+    strategy: 'no_prefix', // no prefix for the url but we can have /en for example for the translation
     locales: [
       {
         code: "en",
@@ -41,6 +41,14 @@ export default defineNuxtConfig({
         file: "fr.json"
       }
     ],
+
+    // doc for this : https://i18n.nuxtjs.org/docs/guide/browser-language-detection
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      detectBrowserLanguage: true
+      redirectOn: 'root' // recommended
+    }
   },
   app: {
     buildAssetsDir: '/public/',
