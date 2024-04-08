@@ -27,7 +27,8 @@
 
                         <li class="nav-item dropdown" :class="{ 'active': $route.path == '/training' }">
                             <a href="#" class="nav-link dropdown-toggle base-link" data-toggle="dropdown" role="button"
-                                aria-expanded="false" data-bs-toggle="dropdown" id="courses_list">Trainings</a>
+                                aria-expanded="false" data-bs-toggle="dropdown" id="courses_list">{{ $t('trainings')
+                                }}</a>
                             <ul class="dropdown-menu menu_level_1" aria-labelled-by="courses_list">
 
                                 <li class="first">
@@ -77,9 +78,7 @@
 
                     <div>
                         <div>
-                            <button @click="setLocale('en')">en</button>
-                            <button @click="setLocale('fr')">fr</button>
-                            <p>{{ $t('hello') }}</p>
+                            <LangSwitcher />
                         </div>
                     </div>
                     <button class="navbar-search js-searchbar-opening btn btn-link pe-0">
@@ -98,7 +97,7 @@
 
 const { locale, setLocale } = useI18n(); // for the translation
 
-const categorys = await queryContent("/category/fr/").find(); // fetch category
+const categorys = await queryContent("/category/" + locale.value + "/").find(); // fetch category
 
 
 useHead({

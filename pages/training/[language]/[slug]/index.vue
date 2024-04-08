@@ -403,22 +403,22 @@ const categoryObject = await queryContent(`/category/${lang}/${training.category
             <p class="lead">Exploitation Anypoint Platform : CloudHub 2.0</p>
 
             <form name="contact" method="post">
-              <div class="form-floating form-group"><input type="text" id="contact_name" name="contact[name]"
-                  required="required" placeholder=" " class="form-control"><label for="contact_name"
-                  class="required">Votre nom</label></div>
-              <div class="form-floating form-group"><input type="text" id="contact_email" name="contact[email]"
-                  required="required" placeholder=" " class="form-control"><label for="contact_email"
-                  class="required">Votre email</label></div>
+              <div class="form-floating form-group"><input type="text" id="contact_name" name="contact[name]" required
+                  placeholder=" " class="form-control"><label for="contact_name" class="required">Votre nom</label>
+              </div>
+              <div class="form-floating form-group"><input type="text" id="contact_email" name="contact[email]" required
+                  placeholder=" " class="form-control"><label for="contact_email" class="required">Votre email</label>
+              </div>
               <div class="form-group"><select id="contact_type" name="contact[type]" class="form-control">
-                  <option value="contact_devis" selected="selected">Demande de devis</option>
+                  <option value="contact_devis" selected>Demande de devis</option>
                   <option value="contact_more_information">Je veux en savoir plus sur cette formation</option>
                   <option value="contact_intra_information">Je souhaite avoir des renseignements pour une formule intra
                   </option>
                   <option value="contact_other">Autres</option>
                 </select></div>
-              <div class="form-floating form-group"><textarea id="contact_message" name="contact[message]"
-                  required="required" placeholder=" " class="form-control"></textarea><label for="contact_message"
-                  class="required">Votre message</label></div>
+              <div class="form-floating form-group"><textarea id="contact_message" name="contact[message]" required
+                  placeholder=" " class="form-control"></textarea><label for="contact_message" class="required">Votre
+                  message</label></div>
               <input type="hidden" id="contact_captcha" name="contact[captcha]"
                 value="03AFcWeA6IdJNo0quijhCYBAKjPvrHzDDjI_Szi_EhRUkrElm3BRWS6zWMM6skQ5m4a8phgGSiF6Xdk_f8dP2oLV-msCfthQ0tDAkvFV313rYC1siUb9yUvMvvK_ZGUMXX67WeiVqmwTffkB3wq6JNd-VIwIVITQf2VlLJKrUHtn99KQ5R1oEbrDOooZI_Wurf47YaUHSb1KSw0Wxq0BjDkyV7IUTjXS7XUuJseJPIjwhJ3cavw4lpxzfyMqGOHALXELbHdExZuIkzLAaF0wi1ppfNziP4wK7KjIWHoMHkCdwLJuw1bRkMIejn5BZuXuF3OF9Ypr4DYLUZc0UIpoTYi-e5xQIyeK4rqmVNPxCZ8hhXZ_8lqAZz5k6GfoX7FcTEzwJiCBkcyeDGkz9O-UzOfUrX0sbPYeBxmkHWVTrtwfzfGS_-4PqjljbvcKAmwK_XxZ7loKRbjnKiXgm9XrWFmVK7iUuVg0sKMobRHz1rjzEb3a3IBP8u5HIhBPvJPPQMnH37-Hy8PNFrPVUBH0zFOfT7-drzGrPc2y-UW6QC3md5SoTjgSnFKWBZowg8CNKyvs3JwbBF0uBWN-tkpqfFRfTLKM9a0t-kDDq5LLeKeIEVx1iBmtz_v-GnGeRON5Ur60bTUV7PEjo5jfHzCToYiXrBRLXspOzwydqzrSTT6x-DT4f3RnSIJ9NLMx24CVHlvSe79vThe1hL">
 

@@ -1,4 +1,4 @@
 ---
-title: CéBfe Securité
+title: Securité
 description: frea
 ---

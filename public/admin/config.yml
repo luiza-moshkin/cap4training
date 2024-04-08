@@ -7,12 +7,12 @@ backend:
   name: git-gateway
   repo: AurelienDesplanque/cap4training # Path to your GitHub repository
   commit_messages:
-    create: "Blog creation ({{slug}})"
-    update: "Update blog ({{slug}})"
-    delete: "Blog deleted ({{slug}})"
-    uploadMedia: "Upload media ({{path}})"
-    deleteMedia: "Delete media {{path}}"
-    openAuthoring: "{{message}}"
+    create: Create {{collection}} “{{slug}}”
+    update: Update {{collection}} “{{slug}}”
+    delete: Delete {{collection}} “{{slug}}”
+    uploadMedia: Upload “{{path}}”
+    deleteMedia: Delete “{{path}}”
+    openAuthoring: '{{message}}'
 
 
 
@@ -135,7 +135,7 @@ collections:
 
   - name: 'generalConditionOfSale'
     label: 'General condition of sale'
-    folder: 'content/generalCondition'
+    folder: 'content/generalcondition'
     create: false
     delete: false
     i18n: true

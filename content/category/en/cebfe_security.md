@@ -1,4 +1,4 @@
 ---
-title: CéBfe Security
+title: Security
 description: frea
 ---

@@ -9,7 +9,6 @@ var category = params.category;
 // const lang = params.language;
 const lang = params.language;
 
-console.log(category);
 
 const formations = await queryContent(`/training/${lang}/`).where({ category: category }).sort({ date: -1 }).find();
 // .where({ category.upper(): category.upper() })
