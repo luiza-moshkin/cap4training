@@ -94,10 +94,22 @@
 </template>
 
 <script setup lang="ts">
+import type { ParsedContent } from '@nuxt/content/dist/runtime/types';
 
-const { locale, setLocale } = useI18n(); // for the translation
+const { locale, setLocale } = useI18n(); // for the translation 
 
-const categorys = await queryContent("/category/" + locale.value + "/").find(); // fetch category
+const categorys = ref<ParsedContent[]>([]);
+
+// Charger les données initiales
+async function loadCategorys() {
+    categorys.value = await queryContent("/category/" + locale.value + "/").find();
+}
+
+loadCategorys(); // load the first time
+watch(locale, async () => { // when we change langue -> refresh, watcher pour détecter les changements de langue
+    loadCategorys();
+});
+
 
 
 useHead({

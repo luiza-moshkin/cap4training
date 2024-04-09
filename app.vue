@@ -9,6 +9,7 @@
 .rotate-leave-active {
   transition: all 0.4s;
 }
+
 .rotate-enter-from,
 .rotate-leave-to {
   opacity: 0;

@@ -25,8 +25,8 @@ export default defineNuxtConfig({
   i18n: { // TRANSLATION PARAMETERS
     langDir: 'locales', // name of the translation directory
 
-    defaultLocale: 'fr',
-    strategy: 'prefix_except_default', // no prefix for the url but we can have /en for example for the translation
+    defaultLocale: 'en',
+    strategy: 'prefix_except_default', // /en for example for the translation and not for the default locale
     locales: [
       {
         code: "en",

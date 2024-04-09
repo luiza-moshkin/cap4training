@@ -255,7 +255,6 @@
 
 <script setup lang="ts">
 
-const locale = process.client ? navigator.language : '';
 
 // browserLanguage qui fonctionne que en local mais pas sur netlify j'ai 
 // du coup je peux pas remplacer le /fr/ par la langue du navigateur snif
