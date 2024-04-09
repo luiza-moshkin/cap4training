@@ -1,36 +1,32 @@
 <template>
     <h3 style="text-align: center;">Our general condition of sale</h3>
     <main id="main" class="typography">
-
+        <!-- Component for parsing Markdown content -->
         <MiscParseMarkdown :markdownString="generalCondition?.content" />
     </main>
 
 </template>
 
-
 <script setup lang="ts">
+import { watch, reactive } from 'vue';
+import { useI18n } from 'vue-i18n';
+const { locale } = useI18n();
 
-const { locale, setLocale } = useI18n();
-
-// ---------  load content 
-var { data: generalCondition } = await reactive(await useAsyncData("generalCondition", () =>
-    queryContent("/generalcondition/" + locale.value + "/general-condition-of-sale-2").findOne())
+// Initialize general data
+const { data: initialGeneralCondition } = await useAsyncData('generalCondition', () =>
+    queryContent(`/generalcondition/${locale.value}/general-condition-of-sale-2`).findOne()
 );
 
+const generalCondition = reactive(initialGeneralCondition);
 
-// watcher when we change the language of the website we need to refresh also the content
-// like that we dont need to refresh the page !
+// Watch for language changes to refresh content
 watch(locale, async () => {
-    var { data: generalCondition } = await reactive(await useAsyncData("generalCondition", async () =>
-        await queryContent("/generalcondition/" + locale.value + "/general-condition-of-sale-2").findOne()
-    ));
+    const { data } = await useAsyncData('generalCondition', async () =>
+        queryContent(`/generalcondition/${locale.value}/general-condition-of-sale-2`).findOne()
+    );
+    Object.assign(generalCondition, data);
 });
-
-
-
-
 </script>
-
 
 <style lang="scss" scoped>
 main {
