@@ -9,6 +9,8 @@
 
 <script setup lang="ts">
 
+
+generalCondition = null;
 const { locale, setLocale } = useI18n(); // for the translation
 console.log("locale; " + locale.value)
 
