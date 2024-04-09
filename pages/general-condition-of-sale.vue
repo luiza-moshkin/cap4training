@@ -1,10 +1,7 @@
 <template>
     <h3 style="text-align: center;">Our general condition of sale</h3>
     <main id="main" class="typography">
-        <ContentRenderer :value="generalCondition">
-
-            <MiscParseMarkdown :markdownString="markdown" />
-        </ContentRenderer>
+        <MiscParseMarkdown :markdownString="markdown" />
     </main>
 
 </template>
@@ -28,6 +25,8 @@ watch(locale, async () => {
     var { data: newGeneralCondition } = await reactive(await useAsyncData("generalCondition", async () =>
         await queryContent("/generalcondition/" + locale.value + "/general-condition-of-sale-2").findOne()
     ));
+    console.log("ouee");
+    console.log(newGeneralCondition?.content);
     markdown = newGeneralCondition?.content;
 });
 
