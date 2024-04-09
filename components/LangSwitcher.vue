@@ -11,11 +11,6 @@ const language = computed({
             https://nuxt.com/docs/api/utils/reload-nuxt-app
         */
 
-
-        reloadNuxtApp({
-
-            ttl: 100, // optional limit of request (1 request per second for this)
-        });
     },
 });
 </script>
