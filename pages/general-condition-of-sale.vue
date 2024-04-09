@@ -25,7 +25,7 @@ watch(locale, async () => {
     var { data: newGeneralCondition } = await reactive(await useAsyncData("generalCondition", async () =>
         await queryContent("/generalcondition/" + locale.value + "/general-condition-of-sale-2").findOne()
     ));
-    console.log("ouee" + locale);
+    console.log("ouee" + locale.value);
     console.log(newGeneralCondition?.content);
     markdown = newGeneralCondition?.content;
 });
