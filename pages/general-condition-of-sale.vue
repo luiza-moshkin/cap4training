@@ -1,8 +1,10 @@
 <template>
     <h3 style="text-align: center;">Our general condition of sale</h3>
     <main id="main" class="typography">
-        {{ generalCondition?.content }}
-        <MiscParseMarkdown :markdownString="generalCondition?.content" />
+        <ContentRenderer :value="generalCondition">
+
+            <MiscParseMarkdown :markdownString="generalCondition?.content" />
+        </ContentRenderer>
     </main>
 
 </template>
@@ -16,7 +18,6 @@ const { locale, setLocale } = useI18n(); // for the translation
 var { data: generalCondition } = await reactive(await useAsyncData("generalCondition", () =>
     queryContent("/generalcondition/" + locale.value + "/general-condition-of-sale-2").findOne())
 );
-
 
 // watcher when we change the language of the website we need to refresh also the content
 // like that we dont need to refresh the page !
