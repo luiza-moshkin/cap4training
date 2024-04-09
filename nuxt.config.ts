@@ -24,7 +24,7 @@ export default defineNuxtConfig({
   },
   i18n: { // TRANSLATION PARAMETERS
     langDir: 'locales', // name of the translation directory
-
+    lazy: true,
     defaultLocale: 'fr',
     strategy: 'prefix_except_default', // /en for example for the translation and not for the default locale
     locales: [
