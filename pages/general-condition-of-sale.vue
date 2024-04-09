@@ -12,6 +12,8 @@
 
 generalCondition = null;
 const { locale, setLocale } = useI18n(); // for the translation
+
+setLocale(locale.value);
 console.log("locale; " + locale.value)
 
 var { data: generalCondition } = await reactive(await useAsyncData("generalCondition", () =>
