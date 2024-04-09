@@ -10,7 +10,7 @@
 <script setup lang="ts">
 
 const { locale, setLocale } = useI18n(); // for the translation
-
+console.log("locale; " + locale)
 
 var { data: generalCondition } = await reactive(await useAsyncData("generalCondition", () =>
     queryContent("/generalcondition/" + locale.value + "/general-condition-of-sale-2").findOne())
@@ -21,13 +21,14 @@ markdown = generalCondition?.content
 
 // watcher when we change the language of the website we need to refresh also the content
 // like that we dont need to refresh the page !
+/*
 watch(locale, async () => {
     var { data: newGeneralCondition } = await queryContent("/generalcondition/" + locale.value + "/general-condition-of-sale-2").findOne();
     console.log("ouee" + locale.value);
     console.log(newGeneralCondition?.content);
     markdown = newGeneralCondition?.content;
 });
-
+*/
 
 
 console.log(generalCondition);

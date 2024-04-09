@@ -95,6 +95,7 @@
 
 <script setup lang="ts">
 import type { ParsedContent } from '@nuxt/content/dist/runtime/types';
+import Index from '~/pages/index.vue';
 
 const { locale, setLocale } = useI18n(); // for the translation 
 
@@ -108,6 +109,7 @@ async function loadCategorys() {
 loadCategorys(); // load the first time
 watch(locale, async () => { // when we change langue -> refresh, watcher pour détecter les changements de langue
     loadCategorys();
+
 });
 
 
