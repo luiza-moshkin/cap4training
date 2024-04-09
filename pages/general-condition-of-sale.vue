@@ -1,7 +1,7 @@
 <template>
     <h3 style="text-align: center;">Our general condition of sale</h3>
     <main id="main" class="typography">
-
+        {{ generalCondition?.content }}
         <MiscParseMarkdown :markdownString="generalCondition?.content" />
     </main>
 
@@ -10,10 +10,9 @@
 
 <script setup lang="ts">
 
-const { locale, setLocale } = useI18n();
+const { locale, setLocale } = useI18n(); // for the translation
 
 
-// -------- -  load content 
 var { data: generalCondition } = await reactive(await useAsyncData("generalCondition", () =>
     queryContent("/generalcondition/" + locale.value + "/general-condition-of-sale-2").findOne())
 );
