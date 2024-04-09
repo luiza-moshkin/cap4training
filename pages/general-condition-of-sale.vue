@@ -3,7 +3,7 @@
     <main id="main" class="typography">
         <ContentRenderer :value="generalCondition">
 
-            <MiscParseMarkdown :markdownString="generalCondition?.content" />
+            <MiscParseMarkdown :markdownString="markdown" />
         </ContentRenderer>
     </main>
 
@@ -19,12 +19,16 @@ var { data: generalCondition } = await reactive(await useAsyncData("generalCondi
     queryContent("/generalcondition/" + locale.value + "/general-condition-of-sale-2").findOne())
 );
 
+let markdown: string;
+markdown = generalCondition?.content
+
 // watcher when we change the language of the website we need to refresh also the content
 // like that we dont need to refresh the page !
 watch(locale, async () => {
-    var { data: generalCondition } = await reactive(await useAsyncData("generalCondition", async () =>
+    var { data: newGeneralCondition } = await reactive(await useAsyncData("generalCondition", async () =>
         await queryContent("/generalcondition/" + locale.value + "/general-condition-of-sale-2").findOne()
     ));
+    markdown = newGeneralCondition?.content;
 });
 
 
