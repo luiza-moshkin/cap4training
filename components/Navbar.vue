@@ -106,12 +106,13 @@ async function loadCategorys() {
     categorys.value = await queryContent("/category/" + locale.value + "/").find();
 }
 
-loadCategorys(); // load the first time
-watch(locale, async () => { // when we change langue -> refresh, watcher pour détecter les changements de langue
+const props = defineProps({
+    locale: { type: String },
+})
+
+watchEffect(() => {
     loadCategorys();
-
-});
-
+})
 
 
 useHead({

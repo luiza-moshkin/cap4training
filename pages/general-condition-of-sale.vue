@@ -24,10 +24,22 @@ var { data: generalCondition } = await reactive(await useAsyncData("generalCondi
 let markdown: string;
 markdown = generalCondition?.content
 
+const props = defineProps({
+    locale: { type: String },
+})
+
+watchEffect(() => {
+    loadContent();
+})
+
+async function loadContent() {
+    var { data: generalCondition } = await reactive(await useAsyncData("generalCondition", () =>
+        queryContent("/generalcondition/" + locale.value + "/general-condition-of-sale-2").findOne())
+    );
+    markdown = generalCondition?.content
 
 
-
-
+}
 
 // watcher when we change the language of the website we need to refresh also the content
 // like that we dont need to refresh the page !
