@@ -25,6 +25,6 @@ watchEffect(async () => {
 });
 </script>
 
-<template>locale.value
+<template>{{ locale.value }}
     <ContentRendererMarkdown :value="record" v-if="record" />
 </template>
