@@ -39,7 +39,7 @@
 
                                 <div v-for="cat of categorys">
                                     <li>
-                                        <NuxtLink :to="'/training/' + $extractTitleFromPath(cat._path)">
+                                        <NuxtLink :to="cat._path">
                                             {{ cat.title }}
                                         </NuxtLink>
                                     </li>
@@ -95,8 +95,10 @@
 
 <script setup lang="ts">
 import type { ParsedContent } from '@nuxt/content/dist/runtime/types';
+import Index from '~/pages/index.vue';
 
 const { locale, setLocale } = useI18n(); // for the translation 
+
 const categorys = ref<ParsedContent[]>([]);
 loadCategorys();
 // Charger les données initiales
