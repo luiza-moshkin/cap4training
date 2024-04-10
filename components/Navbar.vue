@@ -100,7 +100,7 @@ import Index from '~/pages/index.vue';
 const { locale, setLocale } = useI18n(); // for the translation 
 
 const categorys = ref<ParsedContent[]>([]);
-
+loadCategorys();
 // Charger les données initiales
 async function loadCategorys() {
     categorys.value = await queryContent("/category/" + locale.value + "/").find();

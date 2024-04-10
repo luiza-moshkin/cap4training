@@ -3,7 +3,6 @@ export default defineNuxtConfig({
   modules: [
     "@nuxt/content", // to acces to the content training / blog / category,...
     '@nuxtjs/i18n', // for translation
-
     '@vueuse/nuxt',
     'nuxt-icon'
   ],
@@ -45,9 +44,7 @@ export default defineNuxtConfig({
     // doc for this : https://i18n.nuxtjs.org/docs/guide/browser-language-detection
     detectBrowserLanguage: {
       useCookie: true,
-      cookieKey: 'i18n_redirected',
-      detectBrowserLanguage: true,
-      redirectOn: 'root' // recommended
+      cookieKey: 'i18n_redirected'
     }
   },
   app: {
