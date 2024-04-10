@@ -32,27 +32,24 @@
                             <ul class="dropdown-menu menu_level_1" aria-labelled-by="courses_list">
 
                                 <li class="first">
-                                    <NuxtLinkLocale :to="'/training'">
+                                    <NuxtLink :to="'/training'">
                                         {{ $t('all') }}
-                                    </NuxtLinkLocale>
+                                    </NuxtLink>
                                 </li>
 
                                 <div v-for="cat of categorys">
                                     <li>
-                                        <!-- 
-                                            extractTitleFromPath function located at plugin/functions.ts
-                                        -->
-                                        <NuxtLinkLocale :to="'/training/' + $extractTitleFromPath(cat._path)">
+                                        <NuxtLink :to="cat._path">
                                             {{ cat.title }}
-                                        </NuxtLinkLocale>
+                                        </NuxtLink>
                                     </li>
                                 </div>
 
 
                                 <li class="last" :class="{ 'active': $route.path == '/custom-made' }">
-                                    <NuxtLinkLocale :to="'/training/custom-made'">
+                                    <NuxtLink :to="'/custom-made'">
                                         {{ $t('customMade') }}
-                                    </NuxtLinkLocale>
+                                    </NuxtLink>
                                 </li>
 
 
@@ -62,16 +59,16 @@
 
 
                         <li class="nav-item" :class="{ 'active': $route.path == '/blog' }">
-                            <NuxtLinkLocale class="nav-link" :to="'/blog'">
+                            <NuxtLink class="nav-link" :to="'/blog'">
                                 {{ $t('news') }}
-                            </NuxtLinkLocale>
+                            </NuxtLink>
                         </li>
 
 
                         <li class="nav-item last" :class="{ 'active': $route.path == '/contact' }">
-                            <NuxtLinkLocale class="nav-link" :to="'/contact'">
+                            <NuxtLink class="nav-link" :to="'/contact'">
                                 {{ $t('contact') }}
-                            </NuxtLinkLocale>
+                            </NuxtLink>
                         </li>
 
                     </ul>
@@ -98,8 +95,9 @@
 
 <script setup lang="ts">
 import type { ParsedContent } from '@nuxt/content/dist/runtime/types';
+import Index from '~/pages/index.vue';
 
-const { locale } = useI18n(); // for the translation 
+const { locale, setLocale } = useI18n(); // for the translation 
 
 const categorys = ref<ParsedContent[]>([]);
 loadCategorys();
@@ -118,6 +116,5 @@ useHead({
         { src: "/navBarBurgerMenu.js", type: "text/javascript" },
     ],
 });
-
 
 </script>
