@@ -21,7 +21,6 @@ var { data: generalCondition } = await reactive(await useAsyncData("generalCondi
 
 
 
-
 let markdown: string;
 markdown = generalCondition?.content
 

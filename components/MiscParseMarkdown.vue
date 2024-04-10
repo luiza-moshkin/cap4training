@@ -18,12 +18,13 @@ const props = defineProps({
 });
 
 const record = ref("");
+const { locale, setLocale } = useI18n(); // for the translation
 
 watchEffect(async () => {
     await markdownParser.parse("custom.md", props.markdownString).then((md) => record.value = md);
 });
 </script>
 
-<template>
+<template>locale.value
     <ContentRendererMarkdown :value="record" v-if="record" />
 </template>
