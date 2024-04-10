@@ -16,7 +16,7 @@ const { locale, setLocale } = useI18n(); // for the translation
 console.log("locale; " + locale.value)
 
 var { data: generalCondition } = await reactive(await useAsyncData("generalCondition", () =>
-    queryContent("/generalcondition/" + locale.value + "/general-condition-of-sale-2").findOne())
+    queryContent(`/generalcondition/${locale.value}/general-condition-of-sale-2`).findOne())
 );
 
 
@@ -34,7 +34,7 @@ watchEffect(() => {
 
 async function loadContent() {
     var { data: generalCondition } = await reactive(await useAsyncData("generalCondition", () =>
-        queryContent("/generalcondition/" + locale.value + "/general-condition-of-sale-2").findOne())
+        queryContent(`/generalcondition/${locale.value}/general-condition-of-sale-2`).findOne())
     );
     markdown = generalCondition?.content
 
