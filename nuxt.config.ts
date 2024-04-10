@@ -11,8 +11,14 @@ export default defineNuxtConfig({
     markdown: {
       // stop the markdownParser from turning headings into anchor tags
       // Alternatively have a read on markdown render options via the Content module at https://content.nuxt.com/get-started/configuration#markdown
-      anchorLinks: false
-    }
+      anchorLinks: false,
+
+    },
+    navigation: false,
+    locales: [
+      'en', 'fr'
+    ],
+    defaultLocale: 'fr'
   },
 
 
@@ -54,6 +60,7 @@ export default defineNuxtConfig({
 
     },
   },
+
   postcss: {
     plugins: {
       autoprefixer: {},

@@ -9,14 +9,14 @@ var cate = params.categoryy;
 // const lang = params.language;
 
 
-const formations = await queryContent('/training/fr/').find();
-// .where({ category.upper(): category.upper() })
 
+const formations = await queryContent('training', 'fr').where({ category: cate }).sort({ date: -1 }).find();
+// .where({ category.upper(): category.upper() })
 
 
 </script>
 <template>
-  Training list for category "{{ categoryy }}"
+  Training list for category "{{ cate }}"
   <div class="mb-2" v-for="formation of formations">
     <NuxtLink :to="formation._path">
       Title: {{ formation.title }}<br />
