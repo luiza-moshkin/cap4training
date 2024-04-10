@@ -39,7 +39,7 @@
 
                                 <div v-for="cat of categorys">
                                     <li>
-                                        <NuxtLink :to="cat._path">
+                                        <NuxtLink :to="cat._path?.split('/')[cat._path?.split('/').length - 1]">
                                             {{ cat.title }}
                                         </NuxtLink>
                                     </li>
