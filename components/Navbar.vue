@@ -106,11 +106,7 @@ async function loadCategorys() {
     categorys.value = await queryContent("/category/" + locale.value + "/").find();
 }
 
-const props = defineProps({
-    locale: { type: String },
-})
-
-watchEffect(() => {
+watch(locale, () => {
     loadCategorys();
 })
 

@@ -209,12 +209,12 @@
 
 
       <header class="header">
-        <navbar :locale="locale"></navbar>
+        <navbar></navbar>
       </header>
       <main class="main" id="js-main">
 
         <div class="container-fluid -corner">
-          <slot :locale="locale" />
+          <slot />
         </div>
       </main>
 
@@ -267,8 +267,6 @@ useHead({
   ],
 });
 
-
-const { locale, setLocale } = useI18n(); // for the translation 
 
 
 
