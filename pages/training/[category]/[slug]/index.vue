@@ -2,9 +2,8 @@
 const route = useRoute();
 const params = route.params;
 const slug = params.slug;
-const lang = params.language;
-const training = await queryContent(`/training/${lang}/${slug}`).findOne();
-const categoryObject = await queryContent(`/category/${lang}/${training.category}`).findOne();
+const training = await queryContent(`/training/fr/${slug}`).findOne();
+const categoryObject = await queryContent(`/category/fr/${training.category}`).findOne();
 
 </script>
 <!--
