@@ -4,12 +4,12 @@
 
 const route = useRoute();
 const params = route.params;
-var category = params.category;
+var cate = params.categoryy;
 
 // const lang = params.language;
 
 
-const formations = await queryContent(`/training/fr/`).where({ category: category }).sort({ date: -1 }).find();
+const formations = await queryContent('/training/fr/').where({ category: cate }).sort({ date: -1 }).find();
 // .where({ category.upper(): category.upper() })
 
 
