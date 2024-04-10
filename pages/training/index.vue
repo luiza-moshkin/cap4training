@@ -1,5 +1,4 @@
 <script setup lang="ts">
-const { $extractTitleFromPath } = useNuxtApp() // function located at plugin/functions.ts
 
 const posts = await queryContent("/training/fr/").sort({ created_at: -1 }).find();
 const categorys = await queryContent("/category/fr/").find(); // fetch category
