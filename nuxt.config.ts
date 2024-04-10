@@ -24,7 +24,7 @@ export default defineNuxtConfig({
   },
   i18n: { // TRANSLATION PARAMETERS
     langDir: 'locales', // name of the translation directory
-    lazy: true,
+    lazy: true, // true : we load only the language that we need and, if its false we will load ALL language of the locales file
     defaultLocale: 'fr',
     strategy: 'prefix_except_default', // /en for example for the translation and not for the default locale
     locales: [
@@ -61,5 +61,7 @@ export default defineNuxtConfig({
     plugins: {
       autoprefixer: {},
     },
-  }
+  },
+
+  ssr: false
 });
