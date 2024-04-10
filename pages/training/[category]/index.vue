@@ -5,6 +5,7 @@ const params = route.params;
 var category = params.category;
 
 
+const formations = await queryContent(`/training/fr/`).where({ category: category }).sort({ date: -1 }).find();
 // .where({ category.upper(): category.upper() })
 
 
