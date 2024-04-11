@@ -1,6 +1,11 @@
 ---
 title: Private life
 content: >-
+  ***For any questions regarding your personal data and to exercise your rights,
+  you can contact us at the email address:
+  [dpo@cap4learning.fr](mailto:dpo@cap4learning.fr)***
+
+
   **Responsable de traitement** 
 
 
