@@ -14,10 +14,10 @@ export default defineNuxtConfig({
       anchorLinks: false,
 
     },
-
     documentDriven: false
   },
 
+  pages: false,
 
 
   css: ["@/assets/scss/main.scss"],
