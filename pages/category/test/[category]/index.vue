@@ -4,25 +4,26 @@
 
 const route = useRoute();
 const params = route.params;
-var cat = params.category;
+var category = params.category;
 
 // const lang = params.language;
 
 
-//const { data } = await useAsyncData('get-document', () => queryContent(`/training/fr/`).where({ category: category }).sort({ date: -1 }).find())
+//const formations = await queryContent(`/training/fr/`).where({ category: category }).sort({ date: -1 }).find();
+
+
+const { data } = await useAsyncData('get-document', () => queryContent(`/training/fr/`).where({ category: category }).sort({ date: -1 }).find())
 // .where({ category.upper(): category.upper() })
 
 
-import type { QueryBuilderParams } from '@nuxt/content/dist/runtime/types'
-const query: QueryBuilderParams = { path: '/training/fr' }
 
 </script>
 <template>
-  Liste for {{ cat }}
-  <ContentList :query="query" v-slot="{ list }">
-    <div v-for="article in list" :key="article._path">
-      <h3>{{ article.title }}</h3>
-    </div>
-  </ContentList>
+  Liste formation
+  <div class="mb-2" v-for="formation of data">
+    <NuxtLink :to="formation._path">
+      Title: {{ formation.title }}<br />
+    </NuxtLink>
 
+  </div>
 </template>
