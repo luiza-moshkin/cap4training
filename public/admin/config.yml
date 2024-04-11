@@ -146,7 +146,7 @@ collections:
 
   - name: 'privateLife'
     label: 'Private life'
-    folder: 'content/privateLife'
+    folder: 'content/privatelife'
     create: false
     delete: false
     i18n: true
