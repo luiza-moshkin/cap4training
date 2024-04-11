@@ -14,7 +14,7 @@ var cat = params.category;
 
 
 import type { QueryBuilderParams } from '@nuxt/content/dist/runtime/types'
-const query: QueryBuilderParams = { path: '/training/fr/', where: [{ category: cat }], sort: [{ date: -1 }] }
+const query: QueryBuilderParams = { path: '/training/fr' }
 
 </script>
 <template>
