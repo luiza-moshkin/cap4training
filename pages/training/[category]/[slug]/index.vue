@@ -2,7 +2,9 @@
 const route = useRoute();
 const params = route.params;
 const slug = params.slug;
-const lang = params.language;
+
+const {locale} = useI18n();
+const lang = locale.value;
 const training = await queryContent(`/training/${lang}/${slug}`).findOne();
 const categoryObject = await queryContent(`/category/${lang}/${training.category}`).findOne();
 
