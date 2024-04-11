@@ -6,6 +6,7 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     'nuxt-icon'
   ],
+  ssr: false,
 
   content: {
     markdown: {
@@ -13,6 +14,8 @@ export default defineNuxtConfig({
       // Alternatively have a read on markdown render options via the Content module at https://content.nuxt.com/get-started/configuration#markdown
       anchorLinks: false
     },
+    documentDriven: true,
+
     experimental: {
       clientDB: true
     }
