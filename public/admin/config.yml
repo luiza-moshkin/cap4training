@@ -159,6 +159,6 @@ collections:
 
 
 i18n:
-  structure: multiple_folders
+  structure: single_file
   locales: [en, fr]
   default_locale: en
