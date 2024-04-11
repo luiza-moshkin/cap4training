@@ -6,12 +6,15 @@ const route = useRoute();
 const params = route.params;
 const category = params.slug || 'null'
 
+const {locale} = useI18n();
 
-
-const formations = await queryContent('/training/fr/').where({ category: category }).sort({ date: -1 }).find();
+//var formations = await queryContent('/training/' + locale.value + '/').where({ category: category }).sort({ date: -1 }).find();
 // .where({ category.upper(): category.upper() })
 
 
+var { data: formations } = await reactive(await useAsyncData(`training-${locale.value}/`, () =>
+  queryContent('/training/' + locale.value + '/').where({ category: category }).sort({ date: -1 }).find())
+);
 
 </script>
 <template>
