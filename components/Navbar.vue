@@ -39,9 +39,9 @@
 
                                 <div v-for="cat of categorys">
                                     <li>
-                                        <NuxtLink :to="'/training/' +  $extractTitleFromPath(cat._path)">
+                                        <NuxtLinkLocale :to="'/training/' +   $extractTitleFromPath(cat._path)">
                                             {{ cat.title }}
-                                        </NuxtLink>
+                                        </NuxtLinkLocale>
                                     </li>
                                 </div>
 
