@@ -12,17 +12,13 @@ export default defineNuxtConfig({
       // stop the markdownParser from turning headings into anchor tags
       // Alternatively have a read on markdown render options via the Content module at https://content.nuxt.com/get-started/configuration#markdown
       anchorLinks: false
-    },
-    experimental: {
-      clientDb: true
     }
   },
 
   generate: {
     routes: ["/category/test/**"], // one of routes getting 404
-  },
+  }
 
-  ssr: false,
 
 
   css: ["@/assets/scss/main.scss"],
