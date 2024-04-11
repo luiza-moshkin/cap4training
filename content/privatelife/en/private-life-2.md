@@ -1,12 +1,9 @@
 ---
 title: Private life
 content: >-
-  ***Pour toute question concernant vos données à caractère personnel et exercer
-  vos droits, vous pouvez nous contacter à l’adresse électronique :
-  [dpo@cap4learning.fr](mailto:dpo@cap4learning.fr)***
-
-
-  **Data Controller** 
+  [](mailto:dpo@cap4learning.fr)***For any questions regarding your personal
+  data and to exercise your rights, you can contact us at the email address:
+  \[dpo@cap4learning.fr]***
 
 
   Cap4 Learning, SARL with a capital of 1500 euros, registered office at 75 rue de Richelieu 75002 Paris.
