@@ -18,6 +18,7 @@ const formations = await queryContent('/training/fr/').where({ category: categor
   Training list for category "{{ category }}"
   <div class="mb-2" v-for="formation of formations">
     <NuxtLink :to="formation._path">
+    <NuxtLink :to="'/training/' + post.category + '/' +$extractTitleFromPath(post._path)"></NuxtLink>
       Title: {{ formation.title }}<br />
     </NuxtLink>
   </div>
