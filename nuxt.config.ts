@@ -17,7 +17,7 @@ export default defineNuxtConfig({
 
   generate: {
     routes: ["/category/test/**"], // one of routes getting 404
-  }
+  },
 
 
 
