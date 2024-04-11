@@ -32,24 +32,24 @@
                             <ul class="dropdown-menu menu_level_1" aria-labelled-by="courses_list">
 
                                 <li class="first">
-                                    <NuxtLinkLocale :to="'/training'">
+                                    <NuxtLink :to="'/training'">
                                         {{ $t('all') }}
-                                    </NuxtLinkLocale>
+                                    </NuxtLink>
                                 </li>
 
                                 <div v-for="cat of categorys">
                                     <li>
-                                        <NuxtLinkLocale :to="'/training/' + $extractTitleFromPath(cat._path)">
+                                        <NuxtLink :to="cat._path">
                                             {{ cat.title }}
-                                        </NuxtLinkLocale>
+                                        </NuxtLink>
                                     </li>
                                 </div>
 
 
-                                <li class="last" :class="{ 'active': $route.path == '/training' }">
-                                    <NuxtLinkLocale :to="'/training/custom-made'">
+                                <li class="last" :class="{ 'active': $route.path == '/custom-made' }">
+                                    <NuxtLink :to="'/custom-made'">
                                         {{ $t('customMade') }}
-                                    </NuxtLinkLocale>
+                                    </NuxtLink>
                                 </li>
 
 
@@ -58,17 +58,17 @@
                         </li>
 
 
-                        <li class="nav-item" :class="{ 'active': $route.path == '/news' }">
-                            <NuxtLinkLocale class="nav-link" :to="'/news'">
+                        <li class="nav-item" :class="{ 'active': $route.path == '/blog' }">
+                            <NuxtLink class="nav-link" :to="'/blog'">
                                 {{ $t('news') }}
-                            </NuxtLinkLocale>
+                            </NuxtLink>
                         </li>
 
 
                         <li class="nav-item last" :class="{ 'active': $route.path == '/contact' }">
-                            <NuxtLinkLocale class="nav-link" :to="'/contact'">
+                            <NuxtLink class="nav-link" :to="'/contact'">
                                 {{ $t('contact') }}
-                            </NuxtLinkLocale>
+                            </NuxtLink>
                         </li>
 
                     </ul>

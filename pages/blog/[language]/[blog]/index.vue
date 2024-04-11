@@ -2,9 +2,8 @@
 const route = useRoute();
 const params = route.params;
 const blog = params.blog;
-
-const {locale} = useI18n();
-const post = await queryContent(`/blog/${locale.value}/${blog}`).findOne();
+const lang = params.language;
+const post = await queryContent(`/blog/${lang}/${blog}`).findOne();
 </script>
 <template>
   <ContentRenderer :value="post">

@@ -20,7 +20,7 @@ const updateSelectedCategory = (category: String | undefined) => {
 <template>
   All formation
   <div class="mb-2" v-for="post of posts">
-    <NuxtLink :to="'/training/' + post.category + '/' +$extractTitleFromPath(post._path)">
+    <NuxtLink :to="post._path">
       {{ post.title }}
     </NuxtLink>
   </div>
