@@ -1,6 +1,5 @@
 <template>
-    <h3 style="text-align: center;"> {{ $t('welcome') }}
-        Our general condition of sale</h3>
+    <h3 style="text-align: center;"> {{ $t('general-condition-of-sale') }}</h3>
     <main id="main" class="typography">
         <MiscParseMarkdown :markdownString="markdown" />
     </main>
