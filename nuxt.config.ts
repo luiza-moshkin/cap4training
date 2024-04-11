@@ -6,23 +6,13 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     'nuxt-icon'
   ],
-  ssr: false,
 
   content: {
     markdown: {
       // stop the markdownParser from turning headings into anchor tags
       // Alternatively have a read on markdown render options via the Content module at https://content.nuxt.com/get-started/configuration#markdown
       anchorLinks: false
-    },
-    documentDriven: true,
-
-    experimental: {
-      clientDB: true
     }
-  },
-
-  generate: {
-    routes: ["/category/test/**"], // one of routes getting 404
   },
 
 
