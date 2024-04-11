@@ -17,7 +17,6 @@ export default defineNuxtConfig({
     documentDriven: false
   },
 
-  pages: false,
 
 
   css: ["@/assets/scss/main.scss"],
