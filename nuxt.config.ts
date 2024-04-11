@@ -16,7 +16,10 @@ export default defineNuxtConfig({
     },
     documentDriven: false
   },
-
+  routeRules: {
+    '/**': { prerender: true },
+    '/category/**': { ssr: true }
+  },
 
 
   css: ["@/assets/scss/main.scss"],
