@@ -6,8 +6,11 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     'nuxt-icon'
   ],
-
+  devtools: {
+    enabled: true // or false to disable
+  },
   content: {
+    contentHead: true,
     markdown: {
       // stop the markdownParser from turning headings into anchor tags
       // Alternatively have a read on markdown render options via the Content module at https://content.nuxt.com/get-started/configuration#markdown
