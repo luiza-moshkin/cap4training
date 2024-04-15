@@ -7,9 +7,14 @@ export default defineNuxtConfig({
     'nuxt-icon'
   ],
   devtools: {
-    enabled: true // or false to disable
+    enabled: true, // or false to disable,
+
+    timeline: {
+      enabled: true,
+    },
   },
   content: {
+    navigation: false,
     contentHead: true,
     markdown: {
       // stop the markdownParser from turning headings into anchor tags
@@ -31,7 +36,7 @@ export default defineNuxtConfig({
   i18n: { // TRANSLATION PARAMETERS
     langDir: 'locales', // name of the translation directory
     lazy: true, // true : we load only the language that we need and, if its false we will load ALL language of the locales file
-    defaultLocale: 'fr',
+    defaultLocale: 'en',
     strategy: 'prefix_except_default', // /en for example for the translation and not for the default locale
     locales: [
       {

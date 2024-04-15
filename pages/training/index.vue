@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const locale = process.client ? navigator.language : '';
 const browserLanguage = locale.substr(0, 2).toLowerCase(); // en-US to en
-const posts = await queryContent("/training/fr/").sort({ created_at: -1 }).find();
+const posts = await queryContent("/training/").sort({ created_at: -1 }).find();
 const categorys = await queryContent("/category/fr/").find(); // fetch category
 
 let selectedCategory: String = "Our training formation per catégorie"
@@ -21,7 +21,7 @@ const updateSelectedCategory = (category: String | undefined) => {
   All formation
   <div class="mb-2" v-for="post of posts">
     <NuxtLink :to="post._path">
-      {{ post.title }}
+      {{ post.title }} {{ post._path }}
     </NuxtLink>
   </div>
 
